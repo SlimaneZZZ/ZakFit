@@ -1,0 +1,24 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Notes de travail privées
+memoire-claude/
+.claude/
+CLAUDE.md
+docs/cadrage/
+
+# macOS
+.DS_Store
+
+# Swift et Vapor
+.build/
+.swiftpm/
+Package.resolved.orig
+*.xcuserstate
+xcuserdata/
+DerivedData/
+
+# Back-office
+node_modules/
