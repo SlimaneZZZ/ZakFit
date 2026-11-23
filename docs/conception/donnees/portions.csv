@@ -1,0 +1,151 @@
+ciqual_code,libelle_fr,libelle_en,grammes,source
+22000,1 œuf moyen (calibre US « large »),1 medium egg (US large),50,USDA SR Legacy fdc_id=171287
+22000,1 gros œuf (calibre US « extra large »),1 large egg (US extra large),56,USDA SR Legacy fdc_id=171287
+22010,1 œuf dur,1 hard-boiled egg,50,USDA SR Legacy fdc_id=173424
+22502,œufs brouillés (1 œuf),scrambled eggs (1 egg),61,USDA SR Legacy fdc_id=172187
+22500,omelette (1 œuf),omelette (1 egg),61,USDA SR Legacy fdc_id=172185
+22001,1 blanc d'œuf,1 egg white,33,USDA SR Legacy fdc_id=172183
+13000,1 abricot,1 apricot,35,USDA SR Legacy fdc_id=171697
+13002,1 tranche d'ananas,1 pineapple slice,84,USDA SR Legacy fdc_id=169124
+13005,1 banane moyenne,1 medium banana,118,USDA SR Legacy fdc_id=173944
+13005,1 petite banane,1 small banana,101,USDA SR Legacy fdc_id=173944
+13008,1 cerise,1 cherry,8.2,USDA SR Legacy fdc_id=171719
+13009,1 citron,1 lemon,58,USDA SR Legacy fdc_id=167746
+13024,1 clémentine ou petite mandarine,1 clementine or small mandarin,76,USDA SR Legacy fdc_id=169105
+13011,1 datte,1 date,7.1,USDA SR Legacy fdc_id=171726
+13014,1 fraise moyenne,1 medium strawberry,12,USDA SR Legacy fdc_id=167762
+13021,1 kiwi,1 kiwi fruit,69,USDA SR Legacy fdc_id=168153
+13025,1 mangue,1 mango,336,USDA SR Legacy fdc_id=169910
+13026,1 tranche de melon (1/8 d'un melon moyen),1 melon wedge (1/8 of a medium melon),69,USDA SR Legacy fdc_id=169092
+13034,1 orange,1 orange,131,USDA SR Legacy fdc_id=169097
+13036,1 tranche de pastèque,1 watermelon wedge,286,USDA SR Legacy fdc_id=167765
+13037,1 poire moyenne,1 medium pear,178,USDA SR Legacy fdc_id=169118
+13039,1 pomme moyenne,1 medium apple,182,USDA SR Legacy fdc_id=171688
+13039,1 petite pomme,1 small apple,149,USDA SR Legacy fdc_id=171688
+13042,1 pruneau,1 prune,9.5,USDA SR Legacy fdc_id=168162
+13043,1 pêche moyenne,1 medium peach,150,USDA SR Legacy fdc_id=169928
+13395,10 grains de raisin,10 grapes,49,USDA SR Legacy fdc_id=174683
+13046,1 poignée de raisins secs (60 raisins),1 handful of raisins (60 raisins),28.35,USDA SR Legacy fdc_id=168165
+13038,1 pot individuel de compote,1 individual cup of compote,100,estimation : format usuel des compotes en pot individuel vendues en France (4 x 100 g)
+13004,1 avocat,1 avocado,136,USDA SR Legacy fdc_id=171706
+20009,1 carotte moyenne,1 medium carrot,61,USDA SR Legacy fdc_id=170393
+20019,1 concombre,1 cucumber,301,USDA SR Legacy fdc_id=168409
+20020,1 courgette moyenne,1 medium courgette,196,USDA SR Legacy fdc_id=169291
+20034,1 oignon moyen,1 medium onion,110,USDA SR Legacy fdc_id=170000
+20039,1 poireau,1 leek,89,USDA SR Legacy fdc_id=169246
+20087,1 poivron moyen,1 medium sweet pepper,119,USDA SR Legacy fdc_id=170108
+20385,1 tomate moyenne,1 medium tomato,123,USDA SR Legacy fdc_id=170457
+20385,1 tomate cerise,1 cherry tomato,17,USDA SR Legacy fdc_id=170457
+20045,1 radis,1 radish,4.5,USDA SR Legacy fdc_id=169276
+20056,1 champignon de Paris moyen,1 medium button mushroom,18,USDA SR Legacy fdc_id=169251
+4008,1 pomme de terre moyenne (crue),1 medium potato (raw),213,USDA SR Legacy fdc_id=170026
+4003,1 pomme de terre (cuite à l'eau),1 potato (boiled),136,USDA SR Legacy fdc_id=170438
+4026,1 pomme de terre moyenne (cuite au four),1 medium potato (baked),173,USDA SR Legacy fdc_id=170093
+4102,1 patate douce moyenne (cuite),1 medium sweet potato (cooked),114,USDA SR Legacy fdc_id=168483
+11000,1 gousse d'ail,1 garlic clove,3,USDA SR Legacy fdc_id=169230
+15000,1 amande,1 almond,1.2,USDA SR Legacy fdc_id=170567
+15000,1 poignée d'amandes (23 amandes),1 handful of almonds (23 kernels),28.35,USDA SR Legacy fdc_id=170567
+15002,1 poignée de cacahuètes (32 cacahuètes),1 handful of peanuts (32 nuts),28.35,USDA SR Legacy fdc_id=174261
+15005,1 poignée de noix (14 cerneaux),1 handful of walnuts (14 halves),28.35,USDA SR Legacy fdc_id=170187
+15004,10 noisettes,10 hazelnuts,14,USDA SR Legacy fdc_id=170581
+15054,1 cuillère à soupe de noix de cajou,1 tablespoon of cashews,8.6,USDA SR Legacy fdc_id=170571
+15009,1 poignée de pistaches (49 pistaches),1 handful of pistachios (49 kernels),28.35,USDA SR Legacy fdc_id=169426
+15202,2 cuillères à soupe,2 tablespoons,32,USDA SR Legacy fdc_id=172470
+15203,1 cuillère à soupe,1 tablespoon,15,USDA SR Legacy fdc_id=170189
+15010,1 cuillère à soupe,1 tablespoon,9,USDA SR Legacy fdc_id=170150
+7001,1 quart de baguette,1 quarter of a baguette,62.5,estimation : quart d'une baguette au poids usuel de 250 g
+7110,1 tranche de pain complet,1 slice of wholemeal bread,32,USDA SR Legacy fdc_id=172688
+7200,1 tranche de pain de mie,1 slice of sandwich bread,25,USDA SR Legacy fdc_id=174924
+7111,1 tranche de pain de mie complet,1 slice of wholemeal sandwich bread,32,USDA SR Legacy fdc_id=172688 (portion US)
+7300,1 biscotte,1 rusk,8,estimation : poids moyen d'une biscotte du commerce (les biscottes de type melba de l'USDA ne pèsent que 5 g)
+7259,1 pain à burger,1 burger bun,44,USDA SR Legacy fdc_id=172796
+7815,1 tortilla moyenne (18-20 cm),1 medium tortilla (7-8 in),49,USDA SR Legacy fdc_id=175037
+7620,1 croissant,1 croissant,57,USDA SR Legacy fdc_id=174987
+32140,1/3 de tasse US de flocons d'avoine,1/3 US cup of oat flakes,27,USDA SR Legacy fdc_id=173904
+32014,1 bol (1 tasse US),1 bowl (1 US cup),28,USDA SR Legacy fdc_id=174648
+24015,1 biscuit petit-beurre,1 butter biscuit (petit-beurre),8.3,estimation : paquet courant de 200 g pour 24 biscuits ; le biscuit au beurre de l'USDA (5 g) est plus petit
+24684,1 cookie moyen,1 medium cookie,10,USDA SR Legacy fdc_id=172716
+24034,1 sachet de biscuits petit-déjeuner,1 pack of breakfast biscuits,50,estimation : format usuel des sachets fraîcheur de 4 biscuits (50 g)
+24632,1 madeleine,1 madeleine cake,25,estimation : poids usuel d'une madeleine préemballée vendue à l'unité (environ 25 g)
+23490,1 part de tarte aux pommes (1/8),1 slice of apple tart (1/8),125,USDA SR Legacy fdc_id=175011
+31106,1 barre céréalière,1 cereal bar,24,USDA SR Legacy fdc_id=167952
+31060,10 oursons gélifiés,10 gummy bears,22,USDA SR Legacy fdc_id=167989
+31032,2 cuillères à soupe,2 tablespoons,37,USDA SR Legacy fdc_id=168000
+31024,1 cuillère à soupe,1 tablespoon,20,USDA SR Legacy fdc_id=169641
+31016,1 cuillère à café,1 teaspoon,4.2,USDA SR Legacy fdc_id=169655
+31008,1 cuillère à soupe,1 tablespoon,21,USDA SR Legacy fdc_id=169640
+31034,1 cuillère à soupe,1 tablespoon,20,USDA SR Legacy fdc_id=169661
+19041,1 grand verre (1 tasse US),1 large glass (1 US cup),244,USDA SR Legacy fdc_id=171267
+19023,1 grand verre (1 tasse US),1 large glass (1 US cup),244,USDA SR Legacy fdc_id=171265
+19023,1 cuillère à soupe,1 tablespoon,15,USDA SR Legacy fdc_id=171265
+19050,1 grand verre (1 tasse US),1 large glass (1 US cup),245,USDA SR Legacy fdc_id=171269
+19593,1 pot de yaourt,1 pot of yogurt,125,estimation : format standard du pot de yaourt en France (125 g)
+19594,1 pot de yaourt,1 pot of yogurt,125,estimation : format standard du pot de yaourt en France (125 g)
+19587,1 pot de yaourt,1 pot of yogurt,125,estimation : format standard du pot de yaourt en France (125 g)
+19664,1 petit-suisse,1 petit-suisse,60,estimation : format usuel des petits-suisses (6 x 60 g)
+19724,1 pot,1 pot,150,estimation : format usuel des pots de spécialité laitière riche en protéines (150 g)
+39200,1 pot de crème dessert,1 pot of dessert cream,125,estimation : format usuel des crèmes dessert en pot (4 x 125 g)
+12115,1 tranche d'emmental (format US),1 slice of Swiss cheese (US size),28,USDA SR Legacy fdc_id=171251 (portion US)
+12120,1 cuillère à soupe de parmesan râpé,1 tablespoon of grated parmesan,5,USDA SR Legacy fdc_id=171247
+19590,1 boule de mozzarella,1 mozzarella ball,125,estimation : poids égoutté usuel d'une boule de mozzarella vendue en France (125 g)
+12007,1 portion de camembert (1/8),1 portion of camembert (1/8),31.25,estimation : huitième d'un camembert de 250 g (format usuel)
+12303,1 portion de fromage fondu,1 portion of processed cheese,16.6,estimation : boîte usuelle de 8 portions pour 133 g
+19410,1 cuillère à soupe,1 tablespoon,12,USDA SR Legacy fdc_id=171257
+19417,1 cuillère à soupe,1 tablespoon,15,USDA SR Legacy fdc_id=170859
+19420,1 cuillère à soupe,1 tablespoon,3,USDA SR Legacy fdc_id=170860
+16400,1 noix de beurre,1 pat of butter,5,USDA SR Legacy fdc_id=173430
+16400,1 cuillère à soupe,1 tablespoon,14.2,USDA SR Legacy fdc_id=173430
+16402,1 noix de beurre,1 pat of butter,5,USDA SR Legacy fdc_id=173410
+16402,1 cuillère à soupe,1 tablespoon,14.2,USDA SR Legacy fdc_id=173410
+16590,1 cuillère à soupe,1 tablespoon,14.2,USDA SR Legacy fdc_id=172349
+17130,1 cuillère à soupe,1 tablespoon,14,USDA SR Legacy fdc_id=172336
+17130,1 cuillère à café,1 teaspoon,4.5,USDA SR Legacy fdc_id=172336
+17701,1 cuillère à soupe,1 tablespoon,13.5,USDA SR Legacy fdc_id=171413
+17701,1 cuillère à café,1 teaspoon,4.5,USDA SR Legacy fdc_id=171413
+11008,1 cuillère à soupe,1 tablespoon,17,USDA SR Legacy fdc_id=168556
+11054,1 cuillère à soupe,1 tablespoon,13.8,USDA SR Legacy fdc_id=171009
+11110,1 cuillère à soupe,1 tablespoon,16,USDA SR Legacy fdc_id=171414
+11013,1 cuillère à café,1 teaspoon,5,USDA SR Legacy fdc_id=172234
+11104,1 cuillère à soupe,1 tablespoon,16,USDA SR Legacy fdc_id=174277
+11091,1 cuillère à soupe,1 tablespoon,16,USDA SR Legacy fdc_id=172241
+11058,1 cuillère à café,1 teaspoon,6,USDA SR Legacy fdc_id=173468
+11058,1 pincée,1 pinch,0.4,USDA SR Legacy fdc_id=173468
+11015,1 cuillère à café,1 teaspoon,2.3,USDA SR Legacy fdc_id=170931
+20068,1 cuillère à soupe,1 tablespoon,16,USDA SR Legacy fdc_id=170459
+25621,1 cuillère à soupe,1 tablespoon,15,USDA SR Legacy fdc_id=174289
+13033,1 olive,1 olive,2.7,USDA SR Legacy fdc_id=169096
+18004,1 tasse (6 fl oz),1 cup (6 fl oz),178,USDA SR Legacy fdc_id=171890
+18020,1 tasse (6 fl oz),1 cup (6 fl oz),178,USDA SR Legacy fdc_id=173227
+18022,1 tasse (6 fl oz),1 cup (6 fl oz),178,estimation : même volume que la tasse de thé USDA (6 fl oz = 178 g pour fdc_id 173227) ; une infusion a la densité de l'eau
+18018,1 canette (33 cl),1 can (33 cl),342.6,"estimation : canette française de 33 cl ; densité USDA du cola sucré (1 fl oz = 30,7 g pour fdc_id 174852)"
+18060,1 canette (33 cl),1 can (33 cl),330.3,"estimation : canette française de 33 cl ; densité USDA du cola light (1 fl oz = 29,6 g pour fdc_id 174850)"
+18010,1 canette (33 cl),1 can (33 cl),343.7,"estimation : canette française de 33 cl ; densité USDA du soda citron-citron vert (1 fl oz = 30,8 g pour fdc_id 173205)"
+2070,1 grand verre (1 tasse US),1 large glass (1 US cup),248,USDA SR Legacy fdc_id=169098
+2074,1 grand verre (1 tasse US),1 large glass (1 US cup),248,USDA SR Legacy fdc_id=173933
+18901,1 grand verre (1 tasse US),1 large glass (1 US cup),243,USDA SR Legacy fdc_id=172456
+5008,1 demi (25 cl),1 half-pint glass (25 cl),249.4,"estimation : verre de 25 cl ; densité USDA de la bière légère (1 fl oz = 29,5 g pour fdc_id 168749)"
+36017,1 filet de poulet (cru),1 chicken breast fillet (raw),118,USDA SR Legacy fdc_id=171509
+36018,1 filet de poulet (cuit),1 chicken breast fillet (cooked),86,USDA SR Legacy fdc_id=171477
+36006,1 haut de cuisse sans peau (cuit),1 skinless chicken thigh (cooked),116,USDA SR Legacy fdc_id=172388
+36006,1 pilon sans peau (cuit),1 skinless chicken drumstick (cooked),96,USDA SR Legacy fdc_id=172376
+28101,1 côte de porc (sans os),1 pork chop (boneless weight),112,USDA SR Legacy fdc_id=167831
+28925,1 tranche de jambon,1 slice of ham,42,estimation : paquets courants de 4 tranches pour 160 à 180 g ; la tranche USDA (28 g) est plus fine
+6250,1 steak haché (cru),1 minced beef patty (raw),100,estimation : format usuel des steaks hachés vendus en France (100 g)
+30742,1 saucisse de Strasbourg,1 Strasbourg sausage,35,estimation : format usuel des saucisses de Strasbourg (paquets de 10 x 35 g)
+26034,1 petite sardine à l'huile,1 small sardine in oil,12,USDA SR Legacy fdc_id=175139 (portion US)
+10007,4 grosses crevettes,4 large shrimps,22,USDA SR Legacy fdc_id=171971
+10011,6 huîtres moyennes,6 medium oysters,84,USDA SR Legacy fdc_id=171978
+26037,1 tranche de saumon fumé,1 slice of smoked salmon,25,estimation : paquets courants de 4 tranches pour 100 g
+26046,1 bâtonnet de surimi,1 surimi stick,15,estimation : poids usuel d'un bâtonnet de surimi (environ 15 g)
+25413,1 hamburger (restauration rapide),1 hamburger (fast food),78,USDA SR Legacy fdc_id=170693
+36027,1 nugget,1 nugget,16,USDA SR Legacy fdc_id=168079
+25590,1 falafel,1 falafel,17,USDA SR Legacy fdc_id=172455
+25404,1 quart de pizza,1 quarter of a pizza,100,estimation : quart d'une pizza préemballée de 400 g (format usuel)
+5214,1 verre de vin (15 cl),1 glass of wine (5 fl oz),147,USDA SR Legacy fdc_id=173190
+5215,1 verre de vin (15 cl),1 glass of wine (5 fl oz),147,USDA SR Legacy fdc_id=174837
+5216,1 verre de vin (15 cl),1 glass of wine (5 fl oz),147,estimation : même volume et même densité que le verre de vin rouge USDA (5 fl oz = 147 g pour fdc_id 173190)
+5001,1 demi (25 cl),1 half-pint glass (25 cl),251.1,"estimation : verre de 25 cl ; densité USDA de la bière classique (1 fl oz = 29,7 g pour fdc_id 168746)"
+17270,1 cuillère à soupe,1 tablespoon,13.5,USDA SR Legacy fdc_id=171413
+17270,1 cuillère à café,1 teaspoon,4.5,USDA SR Legacy fdc_id=171413
+17440,1 cuillère à soupe,1 tablespoon,13.6,USDA SR Legacy fdc_id=171017
+17440,1 cuillère à café,1 teaspoon,4.5,USDA SR Legacy fdc_id=171017

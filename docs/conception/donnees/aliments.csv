@@ -1,0 +1,303 @@
+ciqual_code,nom_fr,nom_en,groupe_fr,kcal_100g,proteines_100g,glucides_100g,lipides_100g,fibres_100g,viande,porc,poisson_fruits_de_mer,produit_animal,alcool,allergenes
+1029,"Spécialité végétale type fromage en tranche ou râpé, sans soja, préemballée","Plant-based cheese, without soybean, prepacked",produits laitiers,271,0.25,21.2,20.1,2.3,0,0,0,0,0,
+1030,"Fines tranches végétales, préemballées","Plant-based ham, prepacked","viandes, oeufs, poissons",242,29.7,4.13,11.1,3.2,0,0,0,1,0,gluten|oeufs|soja
+2070,"Jus d'orange, pur jus","Orange juice, pure juice",eaux et autres boissons,45.4,0.61,9.61,0.11,0.28,0,0,0,0,0,
+2074,"Jus de pomme, pur jus","Apple juice, pure juice",eaux et autres boissons,48.9,0.17,11.4,0.14,0.23,0,0,0,0,0,
+4003,"Pomme de terre, bouillie/cuite à l'eau","Potato, boiled/cooked in water","fruits, légumes, légumineuses et oléagineux",81,1.8,16.8,0.34,1.8,0,0,0,0,0,
+4004,Chips de pommes de terre nature ou aromatisées,"Potato, crisps, plain or flavoured, standard","fruits, légumes, légumineuses et oléagineux",532,6,51,32.7,4.7,0,0,0,0,0,
+4008,"Pomme de terre, sans peau, crue","Potato, peeled, raw","fruits, légumes, légumineuses et oléagineux",80,2.02,16.2,0.09,2.2,0,0,0,0,0,
+4026,"Pomme de terre, rôtie/cuite au four","Potato, roasted/baked","fruits, légumes, légumineuses et oléagineux",91.4,2.5,19,0.13,2.2,0,0,0,0,0,
+4032,"Frites de pommes de terre, surgelées, cuites en friteuse","French fries or chips, frozen, deep-fried","fruits, légumes, légumineuses et oléagineux",258,3.28,32.7,11.9,3.9,0,0,0,0,0,
+4040,"Purée de pomme de terre, avec lait et beurre, salée","Mashed potatoes, prepared with milk and butter, salted","fruits, légumes, légumineuses et oléagineux",117,1.96,11.3,6.7,1.79,0,0,0,1,0,lait
+4102,"Patate douce, cuite","Sweet potato, cooked","fruits, légumes, légumineuses et oléagineux",79.1,1.69,16.3,0.15,2.9,0,0,0,0,0,
+5001,"Bière ""coeur de marché"" (4-5° alcool)","Beer, regular (4-5° alcohol)",eaux et autres boissons,39,0.39,3.12,0,0,0,0,0,0,1,gluten
+5007,Cidre doux,"Cider, sweet",eaux et autres boissons,38.9,0.25,6.4,0,0,0,0,0,0,1,sulfites
+5008,Bière faiblement alcoolisée (3° alcool),"Beer, low alcohol-content (3° alcohol)",eaux et autres boissons,35.3,0.31,4.62,0,0,0,0,0,0,1,gluten
+5030,"Bière sans alcool (<1,2° alcool) et sans sucres ajoutés, aromatisée ou non","Beer, alcohol-free (<1,2° alcohol), without added sugars, flavoured or unflavoured",eaux et autres boissons,29.4,0.2,6.08,0.053,0,0,0,0,0,1,gluten
+5207,Champagne,Champagne,eaux et autres boissons,76.1,0.3,1.4,0,0,0,0,0,0,1,sulfites
+5214,Vin rouge,"Wine, red",eaux et autres boissons,75.7,0.16,0,0,0,0,0,0,0,1,sulfites
+5215,Vin blanc sec,"Wine, white, dry",eaux et autres boissons,55.3,0.25,0.17,0,0,0,0,0,0,1,sulfites
+5216,Vin rosé,"Wine, rose",eaux et autres boissons,69.2,0.15,1.4,0,0,0,0,0,0,1,sulfites
+6100,"Boeuf, entrecôte, partie maigre grillée/poêlée","Beef, rib steak, lean, grilled/pan-fried","viandes, oeufs, poissons",198,25.5,0,10.7,0,1,0,0,1,0,
+6200,"Boeuf, steak ou bifteck grillé/poêlé","Beef, steak or beef steak, grilled/pan-fried","viandes, oeufs, poissons",128,27.6,0,1.95,0,1,0,0,1,0,
+6210,"Boeuf, rosbif rôti/cuit au four","Beef, roast beef, roasted/baked","viandes, oeufs, poissons",126,24.1,0.3,3.16,0,1,0,0,1,0,
+6230,"Boeuf, à bourguignon ou pot-au-feu, cuit","Beef, stewing meat, cooked","viandes, oeufs, poissons",172,34,0,4.05,0,1,0,0,1,0,
+6250,"Boeuf, steak haché 5% MG cru","Beef, minced steak, 5% fat, raw","viandes, oeufs, poissons",130,21.9,0.3,4.59,0,1,0,0,1,0,
+6251,"Boeuf, steak haché 5% MG cuit","Beef, minced steak, 5% fat, cooked","viandes, oeufs, poissons",155,25.5,0,5.85,0,1,0,0,1,0,
+6255,"Boeuf, steak haché 15% MG cuit","Beef, minced steak, 15% fat, cooked","viandes, oeufs, poissons",239,23.6,0,16.1,0,1,0,0,1,0,
+6520,"Veau, escalope cuite","Veal, escalope, cooked","viandes, oeufs, poissons",147,31,0,2.5,0,1,0,0,1,0,
+7001,"Pain blanc (par ex. : baguette, boule…)","Bread, French bread, baguette",produits céréaliers,287,9.06,58.3,1.4,2.7,0,0,0,0,0,gluten
+7100,Pain de campagne,"French bread, country-style",produits céréaliers,253,8.25,50,1.3,4.3,0,0,0,0,0,gluten
+7110,Pain complet ou intégral (à la farine T150),"Bread, French bread, wholemeal or integral bread (made with flour type 150)",produits céréaliers,234,9.5,41.2,1.7,7.3,0,0,0,0,0,gluten
+7111,"Pain de mie complet, préemballé","Sandwich loaf, wholemeal, prepacked",produits céréaliers,257,8,41.8,4.1,7.3,0,0,0,0,1,gluten
+7130,"Pain sans gluten, préemballé","Bread, French bread, gluten free, prepacked",produits céréaliers,249,4.81,37.1,6.6,9.9,0,0,0,0,0,
+7200,"Pain de mie blanc, préemballé","Sandwich loaf, prepacked",produits céréaliers,279,7.74,50.4,4.37,2.83,0,0,0,0,0,gluten
+7259,"Pain pour burger ou hot dog (bun), préemballé","Rolls for burger/hotdog (buns), prepacked",produits céréaliers,283,9,47.2,4.9,3.5,0,0,0,0,1,gluten
+7300,Biscotte classique,Rusk,produits céréaliers,394,11,73.2,5.43,4.32,0,0,0,0,0,gluten
+7620,"Croissant pur beurre, artisanal","Croissant, pure butter, from bakery",produits sucrés,420,7.25,45.7,22.6,2.5,0,0,0,1,0,gluten|oeufs|lait
+7710,"Pain au lait, artisanal","Milk roll, from bakery",produits sucrés,376,9.38,49,15.4,1.5,0,0,0,1,0,gluten|oeufs|lait
+7730,"Pain au chocolat, artisanal","Chocolate croissant, from bakery",produits sucrés,423,8.19,45.4,22.5,3,0,0,0,1,0,gluten|oeufs|soja|lait
+7740,"Brioche nature, préemballée","Brioche, plain, prepacked",produits sucrés,356,7.99,52.7,12.1,2.09,0,0,0,1,0,gluten|oeufs|lait
+7815,"Tortilla souple (à garnir), à base de blé","Wheat tortilla wrap, to be filled",produits céréaliers,320,8.79,53,7.48,2.89,0,0,0,0,0,gluten
+8211,Pâté ou terrine de campagne,Country-style pâté or terrine,"viandes, oeufs, poissons",323,15.5,1.5,28.2,0,1,1,0,1,0,oeufs
+9100,"Riz blanc, cru","Rice, white, raw",produits céréaliers,350,7.38,77.5,0.79,1.53,0,0,0,0,0,
+9103,"Riz complet, cuit, sans sel ajouté","Rice, wholegrain, cooked, no added salt",produits céréaliers,187,4.06,37.6,1.8,2.1,0,0,0,0,0,
+9104,"Riz blanc, cuit, sans sel ajouté","Rice, white, cooked, no added salt",produits céréaliers,155,3.31,33.2,0.7,1.4,0,0,0,0,0,
+9230,"Pop-corn ou maïs éclaté, à l'huile, salé","Pop-corn or popped maize, with oil, salted",produits céréaliers,477,8.3,50.2,24.6,10.6,0,0,0,0,0,
+9340,"Quinoa, cru","Quinoa, raw",produits céréaliers,358,14.1,58.1,6.07,7,0,0,0,0,0,
+9341,"Quinoa, bouilli/cuit à l'eau, sans sel ajouté","Quinoa, boiled/cooked in water, no added salt",produits céréaliers,149,5,27.9,1.1,3.8,0,0,0,0,0,
+9436,Farine de blé tendre ou froment T55 (pour pains),"Wheat flour, type 55 (for bread)",produits céréaliers,350,9.9,73.7,1,3.2,0,0,0,0,0,gluten
+9510,Amidon de maïs ou fécule de maïs,Maize/corn starch,produits céréaliers,365,0.26,90.4,0.05,0.9,0,0,0,0,0,
+9681,"Graine de couscous (semoule de blé dur précuite), à cuire","Couscous (pre-cooked durum wheat semolina), raw",produits céréaliers,366,13.5,72.7,1.32,4.5,0,0,0,0,0,gluten
+9683,"Semoule ou graine de couscous, cuite, sans sel ajouté","Couscous grain, cooked, no added salt",produits céréaliers,164,6.38,31,0.9,2.8,0,0,0,0,0,gluten
+9691,"Boulgour de blé, cuit, sans sel ajouté","Wheat bulgur, cooked, no added salt",produits céréaliers,131,4.63,24.1,1,3.7,0,0,0,0,0,gluten
+9810,"Pâtes sèches, standard, crues","Pasta, dry, regular, raw",produits céréaliers,364,13.1,72.7,1.6,2.91,0,0,0,0,0,gluten
+9811,"Pâtes sèches, standard, cuites, sans sel ajouté","Pasta, dry, regular, cooked, no added salt",produits céréaliers,167,6.69,31.4,1.1,2.2,0,0,0,0,0,gluten
+9824,"Pâtes sèches, sans gluten, cuites, sans sel ajouté","Pasta, dry, gluten-free, cooked, no added salt",produits céréaliers,163,3.25,34.4,1.1,1,0,0,0,0,0,
+9871,"Pâtes sèches, au blé complet, cuites, sans sel ajouté","Pasta, dry, wholewheat, cooked, no added salt",produits céréaliers,179,7.88,31.3,1.4,5.1,0,0,0,0,0,gluten
+10007,"Crevette, cuite","Shrimp or prawn, boiled","viandes, oeufs, poissons",91.3,20.5,0.2,0.79,0,0,0,1,1,0,crustaces
+10011,"Huître, sans précision, crue","Oyster, raw","viandes, oeufs, poissons",67.2,8.64,3.86,1.91,0,0,0,1,1,0,mollusques
+10013,"Moule, bouillie/cuite à l'eau","Mussel, boiled/cooked in water","viandes, oeufs, poissons",108,17.2,5.12,2.09,0,0,0,1,1,0,mollusques
+10037,"Calmar ou calamar ou encornet, bouilli/cuit à l'eau","Squid, boiled/cooked in water","viandes, oeufs, poissons",149,32.5,1.64,1.4,0,0,0,1,1,0,mollusques
+10082,"Moules marinières (oignons et vin blanc), préemballées","Mussels, in a oignon and white wine broth, prepacked",entrées et plats composés,91.9,10.3,7.43,2.24,0.53,0,0,1,1,1,lait|sulfites|mollusques
+11000,"Ail, cru","Garlic, raw",aides culinaires et ingrédients divers,109,5.31,18.6,0,5.8,0,0,0,0,0,
+11004,"Cornichon, au vinaigre","Gherkin, pickled in vinegar",aides culinaires et ingrédients divers,16,1.06,0.78,0,1.5,0,0,0,0,0,
+11008,"Ketchup, préemballé","Ketchup, prepacked",aides culinaires et ingrédients divers,108,1.23,23.7,0.16,1.77,0,0,0,0,0,
+11013,Moutarde,Mustard,aides culinaires et ingrédients divers,151,6.92,4.33,11.2,0,0,0,0,0,0,moutarde|sulfites
+11014,"Persil, frais","Parsley, fresh",aides culinaires et ingrédients divers,42.5,2.97,4.1,0.63,4.3,0,0,0,0,0,
+11015,"Poivre noir, poudre","Black pepper, powder",aides culinaires et ingrédients divers,331,13.3,39.9,7.5,25.3,0,0,0,0,0,
+11054,"Mayonnaise (70% MG min.), préemballée","Mayonnaise (70% fat min.), prepacked",aides culinaires et ingrédients divers,692,1.33,3.41,74.5,0.26,0,0,0,1,0,oeufs|moutarde
+11058,"Sel blanc alimentaire, iodé, non fluoré (marin, ignigène ou gemme)","Salt, white (sea, igneous or rock), iodine added, no fluride added",aides culinaires et ingrédients divers,0,0,0,0,0,0,0,0,0,0,
+11091,Vinaigre balsamique,"Vinegar, balsamic",aides culinaires et ingrédients divers,91.7,0.69,18,0,0.75,0,0,0,0,0,sulfites
+11101,"Sauce béchamel, préemballée","Béchamel sauce, prepacked",aides culinaires et ingrédients divers,105,2.56,6.2,7.4,1.3,0,0,0,1,0,gluten|lait
+11104,"Sauce soja, préemballée","Soy sauce, prepacked",aides culinaires et ingrédients divers,39.9,7.25,1.72,0,0.9,0,0,0,0,0,gluten|soja
+11107,"Sauce tomate aux oignons, préemballée","Tomato sauce, with onions, prepacked",aides culinaires et ingrédients divers,78.8,1.52,7.69,4.18,2.17,0,0,0,0,0,
+11110,"Sauce vinaigrette (50 à 75% d'huile), préemballée","Salad dressing, (50-75% of oil), prepacked",aides culinaires et ingrédients divers,475,0.55,2.91,51,0.75,0,0,0,0,0,moutarde
+11112,"Harissa (sauce au piment), préemballée","Harissa (hot spicy sauce), prepacked",aides culinaires et ingrédients divers,76.4,2.72,7.3,2.9,5.1,0,0,0,0,0,
+11179,"Sauce pesto, préemballée","Pesto sauce, prepacked",aides culinaires et ingrédients divers,370,3.94,6.6,35.4,2.5,0,0,0,1,0,lait|fruits_a_coque
+11214,"Préparation culinaire à base de soja, type ""crème de soja""","Soy ""cream""",aides culinaires et ingrédients divers,152,3.25,2.03,14.7,,0,0,0,0,0,soja
+12007,Camembert au lait pasteurisé,"Camembert cheese, from cow's milk, from pasteurized milk",produits laitiers,275,18.8,1.29,21.5,0,0,0,0,1,0,lait
+12045,Reblochon,"Reblochon cheese, from cow's milk",produits laitiers,322,19.9,0,26.9,0,0,0,0,1,0,lait
+12066,"Feta, au lait de brebis 70% minimum et lait de chèvre 30% maximum","Feta cheese, 70% min. from ewe's milk, 30% min. from goat's milk",produits laitiers,284,14.8,0.45,24.3,0.2,0,0,0,1,0,lait
+12068,"Fromage frais ou spécialité fromagère non affinée, nature, à tartiner, en barquette, non allégée en matière grasse","Uncured soft cheese, spreadable, plain, in tray, from cow's milk",produits laitiers,225,6.13,3.31,20.7,0,0,0,0,1,0,lait
+12110,Comté,"Comté cheese, from cow's milk",produits laitiers,413,27.2,0,33.8,0,0,0,0,1,0,lait
+12115,Emmental ou emmenthal,"Emmental cheese, from cow's milk",produits laitiers,373,27.3,0,28.8,0,0,0,0,1,0,lait
+12120,Parmesan,"Parmesan cheese, from cow's milk",produits laitiers,411,30.5,1.14,31,0,0,0,0,1,0,lait
+12303,"Fromage fondu en portion (triangle), non enrichi","Processed cheese, from cow's milk, triangle, not fortified",produits laitiers,238,11,8.52,17.6,0.13,0,0,0,1,0,lait
+12500,Roquefort (fromage de brebis),"Roquefort cheese, from ewe's milk",produits laitiers,384,19.1,0,33.9,0,0,0,0,1,0,lait
+12805,"Fromage de chèvre frais, type palet, crottin ou bûchette","Cheese, fresh, from goat's milk,",produits laitiers,194,11.7,2.5,15.2,0.000017,0,0,0,1,0,lait
+12812,Fromage de chèvre bûche,"Cheese, buche, from goat's milk",produits laitiers,285,18.4,0,23.3,0,0,0,0,1,0,lait
+13000,"Abricot, dénoyauté, cru","Apricot, pitted, raw","fruits, légumes, légumineuses et oléagineux",44.1,0.81,9.01,0,1.7,0,0,0,0,0,
+13002,"Ananas, chair sans peau, cru","Pineapple, flesh without skin, raw","fruits, légumes, légumineuses et oléagineux",51.6,0.25,11.7,0,1.2,0,0,0,0,0,
+13004,"Avocat, chair sans peau, sans noyau, cru","Avocado, flesh without skin, pitted, raw","fruits, légumes, légumineuses et oléagineux",203,1.56,0,20.6,3.6,0,0,0,0,0,
+13005,"Banane, chair sans peau, crue","Banana, flesh without skin, raw","fruits, légumes, légumineuses et oléagineux",87.6,1.06,19.7,0,2.7,0,0,0,0,0,
+13008,"Ceriser, chair et peau, sans noyau, crue","Cherry, flesh and skin, pitted, raw","fruits, légumes, légumineuses et oléagineux",53.7,0.81,13,0,1.6,0,0,0,0,0,
+13009,"Citron, chair sans peau, sans pépins, cru","Lemon, flesh without skin, without seeds, raw","fruits, légumes, légumineuses et oléagineux",24.3,0.25,1.56,0,0,0,0,0,0,0,
+13011,"Datte, chair et peau, sans noyau, sèche","Date, flesh and skin, pitted, dried","fruits, légumes, légumineuses et oléagineux",287,1.81,64.7,0.25,7.3,0,0,0,0,0,
+13014,"Fraise, crue","Strawberry, raw","fruits, légumes, légumineuses et oléagineux",35.1,0.63,6.03,0,3.8,0,0,0,0,0,
+13015,"Framboise, crue","Raspberry, raw","fruits, légumes, légumineuses et oléagineux",47.9,1.19,5.83,0.8,4.3,0,0,0,0,0,
+13021,"Kiwi, chair sans peau, avec pépins, cru","Kiwi fruit, flesh without skin, with seeds, raw","fruits, légumes, légumineuses et oléagineux",60.9,0.88,11,0.6,2.4,0,0,0,0,0,
+13024,"Clémentine ou mandarine, chair sans peau, sans pépins, crue","Clementine or Mandarin orange, flesh without skin, without seeds, raw","fruits, légumes, légumineuses et oléagineux",45.5,0.81,9.17,0,1.7,0,0,0,0,0,
+13025,"Mangue, chair sans peau, sans noyau, crue","Mango, flesh without skin, pitted, raw","fruits, légumes, légumineuses et oléagineux",71.1,0.63,14.3,0,1.6,0,0,0,0,0,
+13026,"Melon cantaloup (par ex.: Charentais), chair sans peau, sans pépins, cru","Melon, cantaloupe (ex Charentais melon), flesh without skin, without seeds, raw","fruits, légumes, légumineuses et oléagineux",59.8,1.13,14.8,0,1.3,0,0,0,0,0,
+13033,"Olive verte, en saumure, égouttée","Olive, green, in brine",aides culinaires et ingrédients divers,164,1.13,0.61,16.6,3.6,0,0,0,0,0,
+13034,"Orange, chair sans peau, sans pépins, crue","Orange, flesh without skin, without seeds, raw","fruits, légumes, légumineuses et oléagineux",42,0.75,8.03,0,2.7,0,0,0,0,0,
+13036,"Pastèque, chair sans peau, sans pépins, crue","Watermelon, flesh without skin, without seeds, raw","fruits, légumes, légumineuses et oléagineux",35.4,0.69,8.33,0,0.5,0,0,0,0,0,
+13037,"Poire, chair et peau, crue","Pear, flesh and skin, raw","fruits, légumes, légumineuses et oléagineux",56.6,0.36,12.3,0.27,2.9,0,0,0,0,0,
+13038,"Compote de pomme, préemballée","Apple compote, prepacked","fruits, légumes, légumineuses et oléagineux",107,0.25,25.8,0.23,1.54,0,0,0,0,0,
+13039,"Pomme, chair et peau, crue","Apple, flesh and skin, raw","fruits, légumes, légumineuses et oléagineux",54,0.25,11.6,0.25,1.4,0,0,0,0,0,
+13042,"Pruneau, sans noyau, sec","Prune, pitted","fruits, légumes, légumineuses et oléagineux",229,1.63,55.4,0.4,5.1,0,0,0,0,0,
+13043,"Pêche, chair et peau, sans noyau, crue","Peach, flesh and skin, pitted, raw","fruits, légumes, légumineuses et oléagineux",37.9,0.91,7.55,0.25,1.5,0,0,0,0,0,
+13046,Raisin sec,Raisin,"fruits, légumes, légumineuses et oléagineux",322,3,73.2,0.9,4.2,0,0,0,0,0,
+13395,Raisin cru (aliment moyen),"Grape, raw (average)","fruits, légumes, légumineuses et oléagineux",71,0.7,16.3,0.25,1.11,0,0,0,0,0,
+15000,"Amande, avec peau, sans sel ajouté","Almond, with peel, no added salt","fruits, légumes, légumineuses et oléagineux",615,22.6,9.51,51.3,12.5,0,0,0,0,0,fruits_a_coque
+15002,"Cacahuète, grillée, salée","Peanut, grilled, salted","fruits, légumes, légumineuses et oléagineux",635,26.2,14.2,50.8,8.08,0,0,0,0,0,arachides
+15004,"Noisette, sans sel ajouté","Hazelnut, no added salt","fruits, légumes, légumineuses et oléagineux",632,17,7.16,56.9,11.6,0,0,0,0,0,fruits_a_coque
+15005,"Noix, cerneau, séchée","Walnut, kernel, dried","fruits, légumes, légumineuses et oléagineux",709,15.7,6.88,67.3,6.7,0,0,0,0,0,fruits_a_coque
+15009,"Pistache, grillée, salée","Pistachio nut, grilled, salted","fruits, légumes, légumineuses et oléagineux",617,22.3,15.9,49.5,9.32,0,0,0,0,0,fruits_a_coque
+15010,"Sésame, graine",Sesame seed,"fruits, légumes, légumineuses et oléagineux",606,20.9,12.8,49.7,11.8,0,0,0,0,0,sesame
+15047,"Chia, graine, séchée","Chia, seed, dried","fruits, légumes, légumineuses et oléagineux",454,19.5,7.72,30.7,34.4,0,0,0,0,0,
+15054,"Noix de cajou, grillée, sans sel ajouté","Cashew nut, grilled, no added salt","fruits, légumes, légumineuses et oléagineux",618,20.5,21.3,48.1,8.4,0,0,0,0,0,fruits_a_coque
+15202,Beurre de cacahuète ou pâte d'arachide,Peanut butter or peanut paste,"fruits, légumes, légumineuses et oléagineux",643,25.4,17.3,51.4,5,0,0,0,0,0,arachides
+15203,Tahin ou purée de sésame,Tahini (sesame paste),"fruits, légumes, légumineuses et oléagineux",631,20.3,13.8,53.4,7,0,0,0,0,0,sesame
+16400,"Beurre à 80% MG minimum, doux","Butter, 80% fat minimum, unsalted",matières grasses,753,0.63,0.71,83,0,0,0,0,1,0,lait
+16402,"Beurre à 80% MG, demi-sel","Butter, 80% fat minimum, half-salted",matières grasses,725,0.75,0.5,80,0,0,0,0,1,0,lait
+16590,"Matière grasse tartinable à teneur en MG > 62%, doux, standard","Spreadable fat > 62% fat, unsalted, standard",matières grasses,650,0.022,0.089,72.1,0.13,0,0,0,0,0,
+17130,Huile de colza,Rapeseed oil,matières grasses,900,0,0,100,0,0,0,0,0,0,
+17270,Huile d'olive vierge extra,"Olive oil, extra virgin",matières grasses,899,0.25,0,99.9,0,0,0,0,0,0,
+17440,Huile de tournesol,Sunflower oil,matières grasses,900,0.25,0,100,0,0,0,0,0,0,
+17701,"Huile combinée, mélange d'huile d'olive et de graines",Combined oil (mix of olive oil and seeds oil),matières grasses,900,0,0,100,0,0,0,0,0,0,
+18004,"Café, non instantané, sans sucres ajoutés, prêt à boire","Coffee, non instant no added sugars, ready-to-drink",eaux et autres boissons,5.78,0.25,1.35,0.018,0,0,0,0,0,0,
+18010,"Limonade, sucrée","Lemonade, with sugar(s)",eaux et autres boissons,33,0.000022,8.24,0.000021,0.14,0,0,0,0,0,
+18018,"Cola, sucré","Cola, with sugar(s)",eaux et autres boissons,40.1,0.000026,10,0.000023,0.000057,0,0,0,0,0,
+18020,"Thé infusé, sans sucres ajoutés","Tea, brewed, no added sugars",eaux et autres boissons,0.4,0.1,0,0,0,0,0,0,0,0,
+18022,"Tisane infusée ou infusion, sans sucres ajoutés","Infusion, brewed, no added sugars",eaux et autres boissons,0.8,0,0.2,0,0,0,0,0,0,0,
+18041,Lait de coco,Coconut milk,aides culinaires et ingrédients divers,199,1.94,4.29,19.2,0.75,0,0,0,0,0,
+18045,"Eau minérale, embouteilée, plate (aliment moyen)","Mineral still water, bottled (average)",eaux et autres boissons,0.025,0,0.0062,0,0,0,0,0,0,0,
+18060,"Cola, sans sucres ajoutés, avec édulcorants","Cola, without added sugars and with sweetener(s)",eaux et autres boissons,1.04,0.000019,0.25,0.00002,0.000038,0,0,0,0,0,
+18066,Eau du robinet,"Water, municipal",eaux et autres boissons,0,0,0,0,0,0,0,0,0,0,
+18075,"Boisson au thé, aromatisée, sucrée","Still soft drink with tea extract, flavoured, with sugar(s)",eaux et autres boissons,23.2,0.02,5.78,0.0027,0.13,0,0,0,0,0,
+18104,"Chocolat chaud, boisson instantanée, sucrée, prête à boire (reconstituée avec du lait demi-écrémé)","Instant cocoa or chocolate beverage, with sugar(s), ready-to-drink (reconstituted with standard semi-skimmed milk)",eaux et autres boissons,65.9,3.78,9.5,1.42,0,0,0,0,1,0,lait
+18899,"Boisson à l'avoine, nature, sans sucres ajoutés, non enrichie, préemballée","Oat drink, plain, no added sugar, not fortified, prepacked",eaux et autres boissons,41,0.25,7.78,1.1,0,0,0,0,0,0,gluten
+18901,"Boisson au soja, nature, enrichie en calcium, préemballée","Soy drink, plain, fortified with calcium, prepacked",eaux et autres boissons,44.2,3.75,2.18,2.05,1,0,0,0,0,0,soja
+19023,"Lait entier, UHT","Milk, whole, UHT",produits laitiers,64.6,3.39,4.77,3.55,0,0,0,0,1,0,lait
+19027,"Lait concentré sucré, entier","Condensed milk, with sugar(s), whole",produits laitiers,327,7.54,56.5,7.87,0,0,0,0,1,0,lait
+19041,"Lait demi-écrémé, UHT","Milk, semi-skimmed, UHT",produits laitiers,47.7,3.41,5,1.56,0,0,0,0,1,0,lait
+19050,"Lait écrémé, UHT","Milk, skimmed, UHT",produits laitiers,34.4,3.53,5.01,0.021,0,0,0,0,1,0,lait
+19410,"Crème 30% MG, épaisse, rayon frais","Cream 30% fat, thick, refrigerated",produits laitiers,285,2.28,1.38,29.9,0,0,0,0,1,0,lait
+19417,"Crème 30% MG, fluide, UHT","Cream 30% fat, liquid, UHT",produits laitiers,293,2.16,3.69,30,0,0,0,0,1,0,lait
+19420,"Crème chantilly, sous pression, UHT","Whipped cream, aerosol, UHT",produits laitiers,305,2.06,10.6,28.2,0,0,0,0,1,0,lait
+19508,"Lait fermenté ou yaourt à boire, aromatisé, sucré","Fermented milk drink, flavoured, with sugar(s)",produits laitiers,65.9,3.09,10.7,0.89,0.14,0,0,0,1,0,lait
+19587,"Yaourt ou lait fermenté, aux fruits, sucré","Yogurt or fermented milk, with fruits, with sugar(s)",produits laitiers,88.9,3.17,12.6,2.41,0.6,0,0,0,1,0,lait
+19590,Mozzarella au lait de vache,"Mozzarella cheese, from cow's milk",produits laitiers,227,16.1,0.7,17.7,0,0,0,0,1,0,lait
+19593,"Yaourt ou lait fermenté, nature","Yogurt or fermented milk, plain",produits laitiers,50.1,3.75,4.26,1.68,0,0,0,0,1,0,lait
+19594,"Yaourt ou lait fermenté, nature, 0% MG","Yogurt or fermented milk, plain, 0% fat",produits laitiers,39.1,4.08,4.89,0,0.031,0,0,0,1,0,lait
+19644,"Fromage blanc, nature, 0% MG","Quark, plain, 0% fat",produits laitiers,48.4,7.19,4.22,0,0.042,0,0,0,1,0,lait
+19646,"Fromage blanc, nature, 2-3% MG","Quark, plain, 2-3% fat",produits laitiers,75.7,7.13,3.86,3.23,0.019,0,0,0,1,0,lait
+19664,"Fromage frais type petit suisse, nature, 4% MG environ","Fresh cream cheese, petit-suisse type, plain, around 4% fat",produits laitiers,88,9.52,3.11,3.9,0,0,0,0,1,0,lait
+19693,"Dessert au soja, nature, sans sucres ajoutés, non enrichi, fermenté, rayon frais","Soy dessert, plain, no added sugars, not fortified, fermented, refrigerated",produits laitiers,44.7,4.13,2.05,1.9,0.8,0,0,0,0,0,soja
+19698,"Tiramisu au café, rayon frais","Tiramisu with coffee, refrigerated",produits laitiers,242,4.25,30.2,9.8,1.2,0,0,0,1,1,gluten|oeufs|lait
+19724,"Spécialité laitière riche en protéines, nature","Yoghurt, rich in protein, plain",produits laitiers,74.5,9.1,3.45,2.7,0,0,0,0,1,0,lait
+19863,"Tzatziki à base de yaourt, préemballé","Tzatziki, with yogurt, prepacked",aides culinaires et ingrédients divers,138,6.06,3.8,10.9,,0,0,0,1,0,lait
+20003,"Betterave rouge, cuite","Beetroot, cooked","fruits, légumes, légumineuses et oléagineux",41.5,1.44,7.13,0.4,2.5,0,0,0,0,0,
+20009,"Carotte, crue","Carrot, raw","fruits, légumes, légumineuses et oléagineux",30.2,0.78,5.16,0,2.9,0,0,0,0,0,
+20017,"Chou-fleur, bouilli/cuit à l'eau","Cauliflower, boiled","fruits, légumes, légumineuses et oléagineux",20.9,1.6,1.6,0.46,2,0,0,0,0,0,
+20019,"Concombre, chair et peau, cru","Cucumber, flesh and skin, raw","fruits, légumes, légumineuses et oléagineux",16.8,0.65,2.87,0.11,0.5,0,0,0,0,0,
+20020,"Courgette, chair et peau, crue","Courgette or zucchini, flesh and skin, raw","fruits, légumes, légumineuses et oléagineux",16.7,1.21,1.75,0.32,1,0,0,0,0,0,
+20026,"Endive, crue","Chicory, raw","fruits, légumes, légumineuses et oléagineux",16.6,1.19,2.83,0,1.1,0,0,0,0,0,
+20031,"Laitue, crue","Lettuce, raw","fruits, légumes, légumineuses et oléagineux",14.7,1.35,1.22,0.2,1.1,0,0,0,0,0,
+20034,"Oignon, cru","Onion, raw","fruits, légumes, légumineuses et oléagineux",39,1.1,6.25,0.62,1.7,0,0,0,0,0,
+20039,"Poireau, cru","Leek, raw","fruits, légumes, légumineuses et oléagineux",30.4,1.5,4.55,0.3,1.8,0,0,0,0,0,
+20045,"Radis rouge, cru","Radish, raw","fruits, légumes, légumineuses et oléagineux",11,0.94,1.53,0,1.4,0,0,0,0,0,
+20053,"Aubergine, crue","Eggplant, raw","fruits, légumes, légumineuses et oléagineux",22.9,0.98,2.7,0.18,3,0,0,0,0,0,
+20056,"Champignon de Paris ou champignon de couche, cru","Button mushroom or cultivated mushroom, raw","fruits, légumes, légumineuses et oléagineux",21,2.11,1.83,0.36,1,0,0,0,0,0,
+20066,"Maïs doux, appertisé, égoutté","Corn, sweet, canned, drained","fruits, légumes, légumineuses et oléagineux",105,2.66,18.3,1.68,3.1,0,0,0,0,0,
+20068,"Tomate, concentré, appertisé","Tomato paste, concentrated, canned","fruits, légumes, légumineuses et oléagineux",99.2,4.4,17.1,0.53,4.2,0,0,0,0,0,
+20087,"Poivron rouge, cru","Sweet pepper, red, raw","fruits, légumes, légumineuses et oléagineux",33.6,1.06,5.98,0,3.2,0,0,0,0,0,
+20292,"Courge butternut (doubeurre), chair sans peau, cuite","Pumpkin (cucurbita moschata), flesh without skin, cooked","fruits, légumes, légumineuses et oléagineux",28.9,1.06,5.24,0,1.8,0,0,0,0,0,
+20299,"Asperge verte, bouillie/cuite à l'eau","Asparagus, green, boiled/cooked in water","fruits, légumes, légumineuses et oléagineux",25.3,2.69,1.73,0.3,2.2,0,0,0,0,0,
+20320,"Haricot vert, bouilli/cuit à l'eau","French bean, boiled/cooked in water","fruits, légumes, légumineuses et oléagineux",27,1.75,3.39,0,3.2,0,0,0,0,0,
+20326,"Petits pois, bouillis/cuits à l'eau","Garden peas, boiled/cooked in water","fruits, légumes, légumineuses et oléagineux",80.7,6.38,9.93,0.6,4.8,0,0,0,0,0,
+20336,"Épinard, bouilli/cuit à l'eau","Spinach, boiled/cooked in water","fruits, légumes, légumineuses et oléagineux",26.8,3.38,0,0.7,3.5,0,0,0,0,0,
+20337,"Saucisse végétale au tofu (convient aux véganes ou végétaliens), préemballée","Plant-based sausage with tofu (vegan), prepacked","viandes, oeufs, poissons",228,14.6,5.69,16.3,0,0,0,0,0,0,soja
+20350,"Brocoli, bouilli/cuit à l'eau (aliment moyen)","Broccoli, boiled/cooked in water (average)","fruits, légumes, légumineuses et oléagineux",21.8,2.19,1.03,0.5,3,0,0,0,0,0,
+20352,"Carotte, bouillie/cuite à l'eau (aliment moyen)","Carrot, boiled/cooked in water (average)","fruits, légumes, légumineuses et oléagineux",29.6,0.25,5.73,0,3.3,0,0,0,0,0,
+20357,"Potimarron, chair sans peau, cuit (aliment moyen)","Red kuri squash, flesh without skin, cooked (average)","fruits, légumes, légumineuses et oléagineux",38.6,1.06,6.88,0.3,1.8,0,0,0,0,0,
+20385,"Tomate sans précision, crue (aliment moyen)","Tomato, raw (average)","fruits, légumes, légumineuses et oléagineux",19.2,0.6,3.69,0,1.02,0,0,0,0,0,
+20503,"Haricot rouge, bouilli/cuit à l'eau","Red kidney bean, boiled/cooked in water","fruits, légumes, légumineuses et oléagineux",116,9.63,12.3,0.6,11.6,0,0,0,0,0,
+20506,"Pois cassé, bouilli/cuit à l'eau","Split pea, boiled/cooked in water","fruits, légumes, légumineuses et oléagineux",129,8.6,16.3,1.49,7.95,0,0,0,0,0,
+20507,"Pois chiche, bouilli/cuit à l'eau","Chick pea, boiled/cooked in water","fruits, légumes, légumineuses et oléagineux",148,8.31,17.7,3,8.2,0,0,0,0,0,
+20511,"Haricot blanc, appertisé, égoutté","Haricot bean, canned, drained","fruits, légumes, légumineuses et oléagineux",85.5,5.88,10.9,0.5,7,0,0,0,0,0,
+20532,"Pois chiche, appertisé, égoutté","Chick pea, canned, drained","fruits, légumes, légumineuses et oléagineux",122,6.74,15,2.68,5.45,0,0,0,0,0,
+20585,"Lentille verte, sèche","Lentil, green, dried","fruits, légumes, légumineuses et oléagineux",327,25.1,44.5,1.8,16.4,0,0,0,0,0,
+20587,"Lentille verte, bouillie/cuite à l'eau","Lentil, green, boiled/cooked in water","fruits, légumes, légumineuses et oléagineux",125,10.1,16.2,0.58,8.45,0,0,0,0,0,
+20591,"Protéine de soja texturée, réhydratée","Soy protein, textured, rehydrated",aides culinaires et ingrédients divers,150,20.4,7.03,2.9,5.61,0,0,0,0,0,soja
+20904,"Tofu nature, préemballé","Tofu, plain, prepacked",aides culinaires et ingrédients divers,147,14.7,2.87,8.5,0,0,0,0,0,0,soja
+20917,Tempeh,Tempeh,aides culinaires et ingrédients divers,157,17.6,7.89,4.7,6.2,0,0,0,0,0,soja
+21503,"Agneau, gigot rôti/cuit au four","Lamb, leg, roasted/baked","viandes, oeufs, poissons",169,26.8,0,6.85,0,1,0,0,1,0,
+22000,Oeuf cru,"Egg, raw","viandes, oeufs, poissons",140,12.8,0.06,9.83,0,0,0,0,1,0,oeufs
+22001,"Oeuf, blanc (blanc d'oeuf), cru","Egg white, raw","viandes, oeufs, poissons",48.1,10.9,0.73,0.17,0,0,0,0,1,0,oeufs
+22010,Oeuf dur,"Egg, hard-boiled","viandes, oeufs, poissons",134,13.5,0.52,8.62,0,0,0,0,1,0,oeufs
+22500,"Omelette nature, faite maison","Omelette, plain, homemade","viandes, oeufs, poissons",196,13.8,0.9,15.3,0,0,0,0,1,0,oeufs|lait
+22502,"Oeuf brouillé, avec matière grasse","Egg, scrambled, with added fat","viandes, oeufs, poissons",167,11.9,0.44,13,0,0,0,0,1,0,oeufs|lait
+23414,"Pâte brisée, pur beurre, préemballée, crue","Short crust pastry, pure butter, prepacked, raw",produits céréaliers,390,6.5,45,20,2,0,0,0,1,0,gluten|lait
+23490,Tarte ou tartelette aux pommes,Apple tart,produits sucrés,227,2.52,32.7,8.79,3.3,0,0,0,1,0,gluten|oeufs|lait
+23525,Flan pâtissier aux oeufs ou à la parisienne,Flan tart with eggs,produits sucrés,211,3.89,33.2,6.85,0.48,0,0,0,1,0,gluten|oeufs|lait
+23585,"Gâteau au chocolat, préemballé","Chocolate cake, prepacked",produits sucrés,445,5.88,51,24,3.7,0,0,0,1,0,gluten|oeufs|soja|lait
+23799,"Crêpe, nature, préemballée, rayon frais","Crepe, plain, prepacked, refrigerated",produits sucrés,257,6.31,41.6,6.8,2.2,0,0,0,1,0,gluten|oeufs|lait
+23801,"Galette de sarrasin, nature, souple (à garnir) préemballée","Buckwheat crepe, plain, to be filled, prepacked",produits sucrés,161,5.83,30.5,1.74,0,0,0,0,0,0,gluten
+23925,"Gâteau marbré au chocolat, préemballé","Marble cake, prepacked",produits sucrés,438,5.68,50.5,23.2,1.83,0,0,0,1,0,gluten|oeufs|lait
+23952,"Muffin, au chocolat, préemballé","Muffin, with chocolate, prepacked",produits sucrés,444,5.58,52.5,23,2.42,0,0,0,1,0,gluten|oeufs|soja|lait
+24009,Spéculoos,Speculoos biscuit,produits sucrés,476,5.63,71.2,18.1,3,0,0,0,0,0,gluten|soja
+24015,Biscuit sec petit beurre,Butter biscuit (cookie),produits sucrés,450,7.78,73.4,13.3,2.54,0,0,0,1,0,gluten|lait
+24018,"Biscuit sec sans gluten, petit beurre","Butter biscuit (cookie), gluten free",produits sucrés,460,3.8,79.3,14,0.9,0,0,0,1,0,lait
+24034,"Biscuit sec pour petit déjeuner, sans chocolat, non enrichi","Breakfast biscuit (cookie), without chocolate, not fortified",produits sucrés,452,7.81,65.8,16.3,5.5,0,0,0,1,0,gluten|soja|lait
+24231,"Goûter sec fourré (""sandwiché"") parfum chocolat","Biscuit (cookie), snack with chocolate filling",produits sucrés,471,6.31,67.5,18.5,4.7,0,0,0,1,0,gluten|soja|lait
+24632,"Madeleine ordinaire, préemballée","Madeleine cake, prepacked",produits sucrés,441,5.55,55.3,21.6,1.4,0,0,0,1,0,gluten|oeufs|lait
+24684,"Cookie au chocolat, préemballé","Biscuit (cookie), with chocolate, prepacked",produits sucrés,493,6.44,61,23.8,4.3,0,0,0,1,0,gluten|oeufs|soja|lait
+25001,"Blanquette de veau, préemballée","Veal stew in white sauce, prepacked",entrées et plats composés,113,15.4,3.1,4,0.8,1,0,0,1,0,gluten|lait
+25002,"Cassoulet, appertisé","White bean stew, canned",entrées et plats composés,129,8.06,9.41,5.77,3.55,1,1,0,1,0,
+25009,"Hachis parmentier à la viande, préemballé","Shepherd's pie or cottage pie with meat, prepacked",entrées et plats composés,138,5.99,9.39,8.22,1.43,1,1,0,1,0,lait
+25018,"Ratatouille cuisinée, préemballée","Ratatouille, seasoneded, prepacked",entrées et plats composés,57.1,1.22,4.97,3.15,2.03,0,0,0,0,0,
+25033,"Boeuf bourguignon, préemballé","Burgundy-style beef stew, prepacked",entrées et plats composés,84.3,10.3,4.17,2.61,1.5,1,1,0,1,1,gluten|sulfites
+25056,"Gratin dauphinois, préemballé","Dauphiné-style creamed potatoes au gratin, prepacked",entrées et plats composés,113,3.38,14.5,4.2,1.5,0,0,0,1,0,lait
+25081,"Lasagnes ou canellonis à la viande (bolognaise), préemballés","Lasagna or cannelloni with meat (bolognese sauce), prepacked",entrées et plats composés,134,6.29,13.5,5.72,1.91,1,1,0,1,0,gluten|oeufs|lait|celeri
+25085,"Pâtes à la bolognaise (spaghetti, tagliatelles…), préemballées","Bolognese-style pasta (spaghetti, tagliatelle…), prepacked",entrées et plats composés,116,5.32,13.6,4.07,1.9,1,1,0,1,0,gluten|celeri
+25111,"Chili con carne, préemballé","Chili con carne, prepacked",entrées et plats composés,118,7.13,13,3.35,3.56,1,1,0,1,0,
+25135,"Pâtes à la carbonara (spaghetti, tagliatelles…), préemballées","Carbonara-style pasta (spaghetti, tagliatelle…), prepacked",entrées et plats composés,161,5.91,14.2,8.7,1.18,1,1,0,1,0,gluten|oeufs|lait
+25137,"Tartiflette (pommes de terre, reblochon, lardons…), préemballée","Tartiflette (cheese fondue with potatoes, reblochon cheese, bacon bits…), prepacked",entrées et plats composés,161,6,13.5,8.9,0.8,1,1,0,1,0,lait
+25150,"Couscous de légumes, préemballé","Couscous with vegetables, prepacked",entrées et plats composés,108,4.32,16.4,2.25,2.24,0,0,0,0,0,gluten
+25152,"Couscous à la viande, préemballé","Couscous with meat, prepacked",entrées et plats composés,128,7.59,12.5,4.73,2.53,1,0,0,1,0,gluten
+25187,"Risotto, aux légumes, préemballé","Risotto, with vegetables, prepacked",entrées et plats composés,120,2.88,18.4,3.8,0,0,0,0,1,0,lait
+25223,"Bouchées ou émincé végétal au soja et blé (convient aux véganes ou végétaliens), préemballé","Soy and wheat burger or bite (vegan), prepacked",entrées et plats composés,157,21.3,6.76,3.7,4.86,0,0,0,0,0,gluten|soja
+25404,"Pizza au fromage ou pizza margherita, préemballée","Pizza, cheese and tomato (Margherita), prepacked",entrées et plats composés,224,8.7,29.6,7.41,2.27,0,0,0,1,0,gluten|lait
+25405,"Quiche lorraine, préemballée","Quiche Lorraine (eggs and lardoons quiche), prepacked",entrées et plats composés,269,8.39,21.5,16.4,1.39,1,1,0,1,0,gluten|oeufs|lait
+25413,"Hamburger, de restauration rapide","Hamburger, from fast food",entrées et plats composés,251,13.3,29.5,8.44,1.8,1,0,0,1,0,gluten|moutarde|sesame
+25429,"Sandwich grec ou kebab, baguette, crudités","Sandwich, baguette, kebab and raw vegetables",entrées et plats composés,272,15,29.9,9.8,2,1,0,0,1,0,gluten|oeufs|lait
+25456,Sushi ou maki aux produits de la mer,"Sushi or maki, with seafood products",entrées et plats composés,171,6.69,26.9,3.7,0.9,0,0,1,1,0,poisson
+25510,"Gnocchi à la pomme de terre, cuit","Gnocchi, from potato, cooked",produits céréaliers,178,5.01,34.1,2.05,1.75,0,0,0,0,0,gluten
+25517,"Sandwich baguette, jambon beurre, fait maison","Sandwich, baguette, ham and butter, homemade",entrées et plats composés,285,11.6,35.1,10.5,1.92,1,1,0,1,0,gluten|lait
+25548,"Pizza jambon fromage champignons ou pizza royale, reine ou regina, préemballée","Pizza, ham cheese and mushrooms (Regina), prepacked",entrées et plats composés,208,9.5,25.9,6.89,2.23,1,1,0,1,0,gluten|lait
+25590,"Falafel ou boulette de pois-chiche et/ou fève, préemballé","Falafel, prepacked",entrées et plats composés,211,7.38,17.7,10.8,6,0,0,0,0,0,gluten
+25598,"Seitan, préemballé","Seitan, prepacked",aides culinaires et ingrédients divers,134,20.6,6.74,2.5,0.9,0,0,0,0,0,gluten|soja
+25600,"Salade de céleri rémoulade, préemballée","Celeriac salad, with remoulade sauce, prepacked",entrées et plats composés,114,0.94,3.14,10.2,2.2,0,0,0,1,0,oeufs|celeri|moutarde
+25606,"Salade de pommes de terre, faite maison","Potato salad, homemade",entrées et plats composés,127,2.68,9.9,8.2,1.3,0,0,0,1,0,oeufs|moutarde
+25608,"Taboulé ou salade de semoule aux légumes, préemballé","Tabbouleh or couscous salad, with vegetables, prepacked",entrées et plats composés,179,4.88,23.7,6.7,2.5,0,0,0,0,0,gluten
+25620,"Guacamole, préemballé","Guacamole, prepacked",aides culinaires et ingrédients divers,191,1.82,4.64,17.2,4.84,0,0,0,0,0,
+25621,"Houmous, préemballé","Hummus, prepacked",aides culinaires et ingrédients divers,258,8.06,9,19.9,5.18,0,0,0,0,0,sesame
+25903,"Soupe aux légumes variés, préemballée à réchauffer","Soup, mixed vegetables, prepacked, to be reheated",entrées et plats composés,36.8,0.84,4.5,1.45,1.23,0,0,0,1,0,lait|celeri
+25907,"Soupe aux poireaux et pommes de terre, préemballée à réchauffer","Soup, leek and potato, prepacked, to be reheated",entrées et plats composés,37.1,0.91,5.12,1.25,0.88,0,0,0,1,0,lait|celeri
+26019,"Maquereau, rôti/cuit au four","Mackerel, roasted/baked","viandes, oeufs, poissons",228,21.5,0,15.8,0,0,0,1,1,0,poisson
+26025,"Cabillaud, cuit à la vapeur","Cod, steamed","viandes, oeufs, poissons",106,24.5,0,0.95,0,0,0,1,1,0,poisson
+26034,"Sardine, à l'huile, appertisée, égouttée","European pilchard or sardine, in oil, canned, drained","viandes, oeufs, poissons",217,23.3,0.31,13.7,0,0,0,1,1,0,poisson
+26036,"Saumon, élevage, cru","Salmon, raw, farmed","viandes, oeufs, poissons",193,20.5,0,12.4,0,0,0,1,1,0,poisson
+26037,Saumon fumé,"Salmon, smoked","viandes, oeufs, poissons",184,22.2,0.13,10.5,0.26,0,0,1,1,0,poisson
+26039,"Thon, au naturel, appertisé, égoutté","Tuna, canned in brine, drained","viandes, oeufs, poissons",143,26.8,0,3.94,0,0,0,1,1,0,poisson
+26041,"Thon, rôti/cuit au four","Tuna, roasted/baked","viandes, oeufs, poissons",136,29.9,0,1.83,0,0,0,1,1,0,poisson
+26043,"Cabillaud, cru","Cod, raw","viandes, oeufs, poissons",77.4,18.1,0,0.57,0,0,0,1,1,0,poisson
+26046,"Surimi, bâtonnets, tranche ou râpé saveur crabe","Surimi, on sticks, in slices or grated, crab flavour","viandes, oeufs, poissons",117,7.54,11.8,4.33,0.73,0,0,1,1,0,gluten|crustaces|oeufs|poisson
+26086,"Maquereau, filet sauce tomate, appertisé, égoutté","Mackerel, fillet, in tomato sauce, canned, drained","viandes, oeufs, poissons",240,17.7,5.5,16.3,0.1,0,0,1,1,0,poisson
+26136,"Sardine, grillée/poêlée","European pilchard or sardine, grilled/pan-fried without added fat","viandes, oeufs, poissons",194,25.1,0,10.4,0,0,0,1,1,0,poisson
+26192,"Lieu jaune ou colin, cuit","Pollock, cooked","viandes, oeufs, poissons",97.8,24.4,0,0,0,0,0,1,1,0,poisson
+26229,"Saumon, grillé/poêlé","Salmon, grilled/pan-fried without added fat","viandes, oeufs, poissons",223,25.5,0,13.5,0,0,0,1,1,0,poisson
+28101,"Porc, côte grillée/poêlée","Pork, chop, grilled/pan-fried","viandes, oeufs, poissons",211,29.6,0,10.3,0,1,1,0,1,0,
+28301,"Porc, rôti cuit","Pork, roast, cooked","viandes, oeufs, poissons",163,30.5,0.65,4.31,0,1,1,0,1,0,
+28720,"Lardon fumé, cru","Lardoons, smoked, raw","viandes, oeufs, poissons",272,16.7,0.35,22.6,0.34,1,1,0,1,0,
+28800,Jambon cru,Cured ham,"viandes, oeufs, poissons",239,25.9,4.27,13.2,0,1,1,0,1,0,
+28925,"Jambon cuit, de Paris, découenné dégraissé","Cooked ham, Parisian-style, rind less defatted","viandes, oeufs, poissons",115,20,1.08,3.42,0,1,1,0,1,0,
+28964,Jambon de dinde ou blanc de dinde en tranche,"Cooked ham, from turkey, in slices","viandes, oeufs, poissons",99.3,20.9,0.023,1.67,0.39,1,0,0,1,0,
+30011,Saucisse de Toulouse cuite,"Toulouse sausage, cooked","viandes, oeufs, poissons",279,18.8,1.28,22.1,0,1,1,0,1,0,
+30155,"Merguez, boeuf et mouton, cuite","Merguez sausage, beef and mutton, cooked","viandes, oeufs, poissons",283,19.8,1.8,21.8,0,1,0,0,1,0,sulfites
+30181,"Haché végétal à base de soja, préemballé","Soy-based minced meat imitate, prepacked",entrées et plats composés,143,12.6,7.01,5.8,5.23,0,0,0,0,0,gluten|soja
+30300,Saucisson sec,Dry sausage,"viandes, oeufs, poissons",418,24.2,5.48,33.1,0.73,1,1,0,1,0,lait
+30315,Chorizo,Spicy pork sausage with red pepper,"viandes, oeufs, poissons",425,23.5,1.24,36.1,0.93,1,1,0,1,0,
+30742,"Saucisse de Strasbourg ou knack, à cuire","Strasbourg sausage, to cook","viandes, oeufs, poissons",291,12.4,1.39,25.9,1.37,1,1,0,1,0,
+31000,Barre chocolatée biscuitée,Chocolate bar with biscuit,produits sucrés,492,5.56,61.4,24.1,3.7,0,0,0,1,0,gluten|soja|lait
+31001,Barre chocolatée non biscuitée enrobée,"Chocolate bar, chocolate-coated, without biscuit",produits sucrés,496,3.7,66.4,24.1,0.6,0,0,0,1,0,oeufs|soja|lait
+31004,"Chocolat au lait, tablette","Milk chocolate, bar",produits sucrés,550,7.5,58.9,30.8,2.9,0,0,0,1,0,soja|lait
+31008,Miel,Honey,produits sucrés,331,0.65,82.1,0,0,0,0,0,1,0,
+31016,Sucre blanc,"Sugar, white",produits sucrés,399,0,99.7,0,0,0,0,0,0,0,
+31024,Confiture de fraise (extra ou classique),"Jam, strawberry",produits sucrés,248,0.25,60.5,0.5,0.7,0,0,0,0,0,
+31032,Pâte à tartiner chocolat et noisette,Chocolate spread with hazelnuts,produits sucrés,549,5.02,57.9,32.4,3.23,0,0,0,1,0,soja|lait|fruits_a_coque
+31034,Sirop d'érable,Maple syrup,produits sucrés,269,0.04,67.2,0.06,0,0,0,0,0,0,
+31060,Bonbon gélifié,Jelly candy,produits sucrés,339,4.88,76.9,0.53,1.5,1,1,0,1,0,
+31074,"Chocolat noir 70 % de cacao environ, de dégustation, tablette","Dark chocolate, 70% cocoa, bar",produits sucrés,591,10.4,26.9,46.3,12.8,0,0,0,0,0,
+31087,Édulcorant à base d'extrait de stévia,Stevia sweetener,produits sucrés,1.2,0.16,0.3,0,0,0,0,0,0,0,
+31106,Barre céréalière au chocolat,Cereal bar with chocolate,produits sucrés,451,6.55,73,14.9,4.5,0,0,0,1,0,gluten|soja|lait
+32004,Muesli (aliment moyen),Muesli (average),produits sucrés,433,8.87,63.4,14.3,6.9,0,0,0,0,0,gluten|fruits_a_coque
+32013,"Céréales pour petit déjeuner chocolatées, non fourrées, non enrichies en vitamines et minéraux","Breakfast cereals with chocolate, not filled, not fortified",produits sucrés,387,8.63,77.7,3.2,6.1,0,0,0,1,0,gluten|soja|lait
+32014,"Pétales de maïs nature, non enrichis en vitamines et minéraux","Corn flakes, plain, not fortified",produits sucrés,372,6.88,82.4,0.7,4.6,0,0,0,0,0,gluten
+32140,Flocons d'avoine,Oat flakes,produits sucrés,369,11.4,57.7,7.82,11.2,0,0,0,0,0,gluten
+36005,"Poulet, viande et peau rôties/cuites au four","Chicken, meat and skin, roasted/baked","viandes, oeufs, poissons",204,28.9,0,9.88,0,1,0,0,1,0,
+36006,"Poulet, cuisse, viande rôtie/cuite au four","Chicken leg, meat, roasted/baked","viandes, oeufs, poissons",171,24.8,0,8.03,0,1,0,0,1,0,
+36017,"Poulet, filet sans peau cru","Chicken, breast, without skin, raw","viandes, oeufs, poissons",110,23.4,0,1.5,0,1,0,0,1,0,
+36018,"Poulet, filet sans peau grillé/poêlé","Chicken, breast, without skin, grilled/pan-fried","viandes, oeufs, poissons",141,30.1,0,2,0,1,0,0,1,0,
+36027,"Nuggets ou croquette panée de poulet, préemballé","Chicken nuggets, breaded croquette, prepacked",entrées et plats composés,250,15.6,19.4,11.6,2.4,1,0,0,1,0,gluten
+36205,"Canard, magret grillé/poêlé","Duck, magret, grilled/pan-fried","viandes, oeufs, poissons",188,26.7,0,9.05,0,1,0,0,1,0,
+36304,"Dinde, escalope crue","Turkey, escalope, raw","viandes, oeufs, poissons",108,23.7,0,1.48,0,1,0,0,1,0,
+36306,"Dinde, escalope grillée/poêlée","Turkey, escalope, grilled/pan-fried","viandes, oeufs, poissons",124,28.5,0,1.09,0,1,0,0,1,0,
+38402,"Biscuit ou cracker apéritif, à base de blé, nature ou aromatisé","Salty snacks, crackers, made from wheat, plain or flavoured",produits céréaliers,499,10.4,59.1,23.8,3.12,0,0,0,0,0,gluten
+39200,"Crème dessert au chocolat, rayon frais","Custard dessert, chocolate, refrigerated",produits laitiers,121,3.39,17.9,3.55,1.5,0,0,0,1,0,lait
+39212,"Riz au lait vanille, cannelle ou nature, rayon frais","Rice pudding, vanilla, cinnamon or plain, refrigerated",produits laitiers,121,2.94,18.9,3.4,1.2,0,0,0,1,0,lait
+39524,"Sorbet, en bac","Sorbet, in box",glaces et sorbets,122,0.4,28.7,0.56,0.99,0,0,0,0,0,
+39527,"Glace ou crème glacée, bac ou pot (aliment moyen)","Ice cream, box or cup (average)",glaces et sorbets,171,2.78,25,6.45,1.5,0,0,0,1,0,lait

@@ -1,0 +1,303 @@
+alim_code,nom_fr,viande,porc,poisson_fruits_de_mer,produit_animal,alcool,allergenes,verifie,note
+25606,"Salade de pommes de terre, faite maison",0,0,0,1,0,oeufs|moutarde,oui,Recette CIQUAL non détaillée : sauce mayonnaise ou vinaigrette moutardée supposée (prudence).
+25608,"Taboulé ou salade de semoule aux légumes, préemballé",0,0,0,0,0,gluten,oui,Semoule de blé dur.
+25600,"Salade de céleri rémoulade, préemballée",0,0,0,1,0,celeri|oeufs|moutarde,oui,Céleri-rave et sauce rémoulade (mayonnaise moutardée).
+25903,"Soupe aux légumes variés, préemballée à réchauffer",0,0,0,1,0,lait|celeri,oui,Soupes du commerce : céleri et crème fréquents (prudence).
+25907,"Soupe aux poireaux et pommes de terre, préemballée à réchauffer",0,0,0,1,0,lait|celeri,oui,Soupes du commerce : céleri et crème fréquents (prudence).
+25001,"Blanquette de veau, préemballée",1,0,0,1,0,gluten|lait,oui,Veau ; roux (farine) et crème. Liaison au jaune d'œuf et céleri possibles selon recette.
+25033,"Boeuf bourguignon, préemballé",1,1,0,1,1,gluten|sulfites,oui,Bœuf mijoté au vin rouge (sulfites) ; lardons dans la recette classique (porc par prudence) ; alcool : vin de cuisson (éthanol résiduel 0 dans CIQUAL).
+25002,"Cassoulet, appertisé",1,1,0,1,0,,oui,"Haricots, saucisse et viande de porc ; confit de canard possible."
+25111,"Chili con carne, préemballé",1,1,0,1,0,,oui,Viande de bœuf dans la recette type ; porc possible (viande non précisée) : porc étiqueté par prudence.
+25152,"Couscous à la viande, préemballé",1,0,0,1,0,gluten,oui,"Semoule de blé ; viande souvent mouton, poulet ou merguez, pas de porc dans la recette traditionnelle."
+25150,"Couscous de légumes, préemballé",0,0,0,0,0,gluten,oui,Semoule de blé et légumes ; végan dans la recette courante.
+25590,"Falafel ou boulette de pois-chiche et/ou fève, préemballé",0,0,0,0,0,gluten,oui,"Pois chiche ; farine de blé fréquente dans les recettes du commerce, sésame parfois."
+25056,"Gratin dauphinois, préemballé",0,0,0,1,0,lait,oui,"Pommes de terre, crème et lait."
+25009,"Hachis parmentier à la viande, préemballé",1,1,0,1,0,lait,oui,Porc possible (viande non précisée) : porc étiqueté par prudence ; purée au lait et au beurre.
+25081,"Lasagnes ou canellonis à la viande (bolognaise), préemballés",1,1,0,1,0,gluten|oeufs|lait|celeri,oui,"Pâtes aux œufs, béchamel, sauce bolognaise (céleri) ; porc possible (viande non précisée) : porc étiqueté par prudence."
+10082,"Moules marinières (oignons et vin blanc), préemballées",0,0,1,1,1,mollusques|sulfites|lait,oui,Moules au vin blanc (sulfites) et au beurre ; alcool : vin de cuisson (éthanol résiduel 0 dans CIQUAL).
+36027,"Nuggets ou croquette panée de poulet, préemballé",1,0,0,1,0,gluten,oui,Poulet pané (chapelure de blé).
+25085,"Pâtes à la bolognaise (spaghetti, tagliatelles…), préemballées",1,1,0,1,0,gluten|celeri,oui,"Pâtes de blé, sauce bolognaise (céleri) ; porc possible (viande non précisée) : porc étiqueté par prudence ; parmesan possible."
+25135,"Pâtes à la carbonara (spaghetti, tagliatelles…), préemballées",1,1,0,1,0,gluten|oeufs|lait,oui,"Lardons (porc), œuf, crème ou fromage."
+25018,"Ratatouille cuisinée, préemballée",0,0,0,0,0,,oui,Légumes et huile ; végan.
+25187,"Risotto, aux légumes, préemballé",0,0,0,1,0,lait,oui,"Riz, beurre et parmesan ; céleri et vin blanc possibles selon recette."
+25456,Sushi ou maki aux produits de la mer,0,0,1,1,0,poisson,oui,Riz et produits de la mer ; crevette (crustacés) et sésame possibles selon recette.
+25137,"Tartiflette (pommes de terre, reblochon, lardons…), préemballée",1,1,0,1,0,lait,oui,"Reblochon, crème, lardons (porc)."
+30181,"Haché végétal à base de soja, préemballé",0,0,0,0,0,soja|gluten,oui,Protéines de soja ; protéines de blé fréquentes. Vérifier l'œuf selon la marque.
+25223,"Bouchées ou émincé végétal au soja et blé (convient aux véganes ou végétaliens), préemballé",0,0,0,0,0,soja|gluten,oui,Soja et blé ; végan selon le libellé CIQUAL.
+25404,"Pizza au fromage ou pizza margherita, préemballée",0,0,0,1,0,gluten|lait,oui,Pâte à pizza (blé) et mozzarella ; végétarienne.
+25548,"Pizza jambon fromage champignons ou pizza royale, reine ou regina, préemballée",1,1,0,1,0,gluten|lait,oui,"Jambon (porc), fromage."
+25405,"Quiche lorraine, préemballée",1,1,0,1,0,gluten|oeufs|lait,oui,"Lardons (porc), œufs, crème, pâte brisée."
+25413,"Hamburger, de restauration rapide",1,0,0,1,0,gluten|sesame|moutarde,oui,"Steak de bœuf, pain à burger (sésame fréquent), moutarde et ketchup."
+25517,"Sandwich baguette, jambon beurre, fait maison",1,1,0,1,0,gluten|lait,oui,"Baguette, jambon (porc), beurre."
+25429,"Sandwich grec ou kebab, baguette, crudités",1,0,0,1,0,gluten|lait|oeufs,oui,"Viande souvent veau, dinde ou poulet ; sauce blanche (yaourt, mayonnaise : moutarde possible)."
+20299,"Asperge verte, bouillie/cuite à l'eau",0,0,0,0,0,,oui,
+20053,"Aubergine, crue",0,0,0,0,0,,oui,
+13004,"Avocat, chair sans peau, sans noyau, cru",0,0,0,0,0,,oui,
+20003,"Betterave rouge, cuite",0,0,0,0,0,,oui,
+20350,"Brocoli, bouilli/cuit à l'eau (aliment moyen)",0,0,0,0,0,,oui,
+20009,"Carotte, crue",0,0,0,0,0,,oui,
+20352,"Carotte, bouillie/cuite à l'eau (aliment moyen)",0,0,0,0,0,,oui,
+20056,"Champignon de Paris ou champignon de couche, cru",0,0,0,0,0,,oui,
+20017,"Chou-fleur, bouilli/cuit à l'eau",0,0,0,0,0,,oui,
+20019,"Concombre, chair et peau, cru",0,0,0,0,0,,oui,
+20292,"Courge butternut (doubeurre), chair sans peau, cuite",0,0,0,0,0,,oui,
+20020,"Courgette, chair et peau, crue",0,0,0,0,0,,oui,
+20026,"Endive, crue",0,0,0,0,0,,oui,
+20336,"Épinard, bouilli/cuit à l'eau",0,0,0,0,0,,oui,
+20320,"Haricot vert, bouilli/cuit à l'eau",0,0,0,0,0,,oui,
+20031,"Laitue, crue",0,0,0,0,0,,oui,
+20066,"Maïs doux, appertisé, égoutté",0,0,0,0,0,,oui,
+20034,"Oignon, cru",0,0,0,0,0,,oui,
+20326,"Petits pois, bouillis/cuits à l'eau",0,0,0,0,0,,oui,
+20039,"Poireau, cru",0,0,0,0,0,,oui,
+20087,"Poivron rouge, cru",0,0,0,0,0,,oui,
+20357,"Potimarron, chair sans peau, cuit (aliment moyen)",0,0,0,0,0,,oui,
+20045,"Radis rouge, cru",0,0,0,0,0,,oui,
+20385,"Tomate sans précision, crue (aliment moyen)",0,0,0,0,0,,oui,
+20068,"Tomate, concentré, appertisé",0,0,0,0,0,,oui,
+4003,"Pomme de terre, bouillie/cuite à l'eau",0,0,0,0,0,,oui,
+4008,"Pomme de terre, sans peau, crue",0,0,0,0,0,,oui,
+4026,"Pomme de terre, rôtie/cuite au four",0,0,0,0,0,,oui,
+4032,"Frites de pommes de terre, surgelées, cuites en friteuse",0,0,0,0,0,,oui,
+4040,"Purée de pomme de terre, avec lait et beurre, salée",0,0,0,1,0,lait,oui,Lait et beurre.
+4004,Chips de pommes de terre nature ou aromatisées,0,0,0,0,0,,oui,Chips aromatisées : lait ou gluten possibles selon l'arôme.
+4102,"Patate douce, cuite",0,0,0,0,0,,oui,
+20511,"Haricot blanc, appertisé, égoutté",0,0,0,0,0,,oui,
+20503,"Haricot rouge, bouilli/cuit à l'eau",0,0,0,0,0,,oui,
+20587,"Lentille verte, bouillie/cuite à l'eau",0,0,0,0,0,,oui,
+20585,"Lentille verte, sèche",0,0,0,0,0,,oui,
+20507,"Pois chiche, bouilli/cuit à l'eau",0,0,0,0,0,,oui,
+20532,"Pois chiche, appertisé, égoutté",0,0,0,0,0,,oui,
+20506,"Pois cassé, bouilli/cuit à l'eau",0,0,0,0,0,,oui,
+13000,"Abricot, dénoyauté, cru",0,0,0,0,0,,oui,
+13002,"Ananas, chair sans peau, cru",0,0,0,0,0,,oui,
+13005,"Banane, chair sans peau, crue",0,0,0,0,0,,oui,
+13008,"Ceriser, chair et peau, sans noyau, crue",0,0,0,0,0,,oui,
+13009,"Citron, chair sans peau, sans pépins, cru",0,0,0,0,0,,oui,
+13024,"Clémentine ou mandarine, chair sans peau, sans pépins, crue",0,0,0,0,0,,oui,
+13038,"Compote de pomme, préemballée",0,0,0,0,0,,oui,
+13011,"Datte, chair et peau, sans noyau, sèche",0,0,0,0,0,,oui,
+13014,"Fraise, crue",0,0,0,0,0,,oui,
+13015,"Framboise, crue",0,0,0,0,0,,oui,
+13021,"Kiwi, chair sans peau, avec pépins, cru",0,0,0,0,0,,oui,
+13025,"Mangue, chair sans peau, sans noyau, crue",0,0,0,0,0,,oui,
+13026,"Melon cantaloup (par ex.: Charentais), chair sans peau, sans pépins, cru",0,0,0,0,0,,oui,
+13034,"Orange, chair sans peau, sans pépins, crue",0,0,0,0,0,,oui,
+13036,"Pastèque, chair sans peau, sans pépins, crue",0,0,0,0,0,,oui,
+13037,"Poire, chair et peau, crue",0,0,0,0,0,,oui,
+13039,"Pomme, chair et peau, crue",0,0,0,0,0,,oui,
+13042,"Pruneau, sans noyau, sec",0,0,0,0,0,,oui,
+13043,"Pêche, chair et peau, sans noyau, crue",0,0,0,0,0,,oui,
+13395,Raisin cru (aliment moyen),0,0,0,0,0,,oui,
+13046,Raisin sec,0,0,0,0,0,,oui,Sulfites possibles sur certains raisins secs blonds.
+15000,"Amande, avec peau, sans sel ajouté",0,0,0,0,0,fruits_a_coque,oui,
+15202,Beurre de cacahuète ou pâte d'arachide,0,0,0,0,0,arachides,oui,
+15002,"Cacahuète, grillée, salée",0,0,0,0,0,arachides,oui,
+15047,"Chia, graine, séchée",0,0,0,0,0,,oui,
+15004,"Noisette, sans sel ajouté",0,0,0,0,0,fruits_a_coque,oui,
+15054,"Noix de cajou, grillée, sans sel ajouté",0,0,0,0,0,fruits_a_coque,oui,
+15005,"Noix, cerneau, séchée",0,0,0,0,0,fruits_a_coque,oui,
+15009,"Pistache, grillée, salée",0,0,0,0,0,fruits_a_coque,oui,
+15010,"Sésame, graine",0,0,0,0,0,sesame,oui,
+15203,Tahin ou purée de sésame,0,0,0,0,0,sesame,oui,
+9691,"Boulgour de blé, cuit, sans sel ajouté",0,0,0,0,0,gluten,oui,Blé.
+9681,"Graine de couscous (semoule de blé dur précuite), à cuire",0,0,0,0,0,gluten,oui,Blé dur.
+9683,"Semoule ou graine de couscous, cuite, sans sel ajouté",0,0,0,0,0,gluten,oui,Blé dur.
+25510,"Gnocchi à la pomme de terre, cuit",0,0,0,0,0,gluten,oui,Farine de blé ; œuf possible selon la marque.
+9810,"Pâtes sèches, standard, crues",0,0,0,0,0,gluten,oui,Blé dur.
+9811,"Pâtes sèches, standard, cuites, sans sel ajouté",0,0,0,0,0,gluten,oui,Blé dur.
+9871,"Pâtes sèches, au blé complet, cuites, sans sel ajouté",0,0,0,0,0,gluten,oui,Blé dur complet.
+9824,"Pâtes sèches, sans gluten, cuites, sans sel ajouté",0,0,0,0,0,,oui,Pâtes sans gluten (libellé CIQUAL).
+9340,"Quinoa, cru",0,0,0,0,0,,oui,
+9341,"Quinoa, bouilli/cuit à l'eau, sans sel ajouté",0,0,0,0,0,,oui,
+9100,"Riz blanc, cru",0,0,0,0,0,,oui,
+9104,"Riz blanc, cuit, sans sel ajouté",0,0,0,0,0,,oui,
+9103,"Riz complet, cuit, sans sel ajouté",0,0,0,0,0,,oui,
+7001,"Pain blanc (par ex. : baguette, boule…)",0,0,0,0,0,gluten,oui,Farine de blé.
+7100,Pain de campagne,0,0,0,0,0,gluten,oui,Farines de blé et souvent de seigle.
+7110,Pain complet ou intégral (à la farine T150),0,0,0,0,0,gluten,oui,Farine de blé complète.
+7200,"Pain de mie blanc, préemballé",0,0,0,0,0,gluten,oui,"Farine de blé ; alcool non étiqueté : éthanol mesuré 0,2 g/100 g, sous le seuil de 0,5 g (conservateur fréquent) ; lait possible selon la marque."
+7111,"Pain de mie complet, préemballé",0,0,0,0,1,gluten,oui,"Farine de blé ; alcool étiqueté : éthanol mesuré 0,82 g/100 g, au-dessus du seuil de 0,5 g (conservateur fréquent) ; lait possible selon la marque."
+7300,Biscotte classique,0,0,0,0,0,gluten,oui,Farine de blé ; lait ou soja possibles selon la marque.
+7259,"Pain pour burger ou hot dog (bun), préemballé",0,0,0,0,1,gluten,oui,"Farine de blé ; alcool étiqueté : éthanol mesuré 0,89 g/100 g, au-dessus du seuil de 0,5 g ; sésame, lait ou œuf possibles selon la marque."
+7815,"Tortilla souple (à garnir), à base de blé",0,0,0,0,0,gluten,oui,Farine de blé.
+7130,"Pain sans gluten, préemballé",0,0,0,0,0,,oui,"Sans gluten (libellé CIQUAL) ; alcool non étiqueté : éthanol mesuré 0,078 g/100 g, sous le seuil de 0,5 g."
+38402,"Biscuit ou cracker apéritif, à base de blé, nature ou aromatisé",0,0,0,0,0,gluten,oui,Farine de blé ; lait possible dans les versions aromatisées.
+9230,"Pop-corn ou maïs éclaté, à l'huile, salé",0,0,0,0,0,,oui,
+9436,Farine de blé tendre ou froment T55 (pour pains),0,0,0,0,0,gluten,oui,Farine de blé.
+9510,Amidon de maïs ou fécule de maïs,0,0,0,0,0,,oui,
+23414,"Pâte brisée, pur beurre, préemballée, crue",0,0,0,1,0,gluten|lait,oui,Farine de blé et beurre ; œuf possible selon la marque.
+21503,"Agneau, gigot rôti/cuit au four",1,0,0,1,0,,oui,
+6200,"Boeuf, steak ou bifteck grillé/poêlé",1,0,0,1,0,,oui,
+6100,"Boeuf, entrecôte, partie maigre grillée/poêlée",1,0,0,1,0,,oui,
+6251,"Boeuf, steak haché 5% MG cuit",1,0,0,1,0,,oui,
+6255,"Boeuf, steak haché 15% MG cuit",1,0,0,1,0,,oui,
+6210,"Boeuf, rosbif rôti/cuit au four",1,0,0,1,0,,oui,
+6230,"Boeuf, à bourguignon ou pot-au-feu, cuit",1,0,0,1,0,,oui,
+36205,"Canard, magret grillé/poêlé",1,0,0,1,0,,oui,
+36306,"Dinde, escalope grillée/poêlée",1,0,0,1,0,,oui,
+28101,"Porc, côte grillée/poêlée",1,1,0,1,0,,oui,
+28301,"Porc, rôti cuit",1,1,0,1,0,,oui,
+36018,"Poulet, filet sans peau grillé/poêlé",1,0,0,1,0,,oui,
+36006,"Poulet, cuisse, viande rôtie/cuite au four",1,0,0,1,0,,oui,
+36005,"Poulet, viande et peau rôties/cuites au four",1,0,0,1,0,,oui,
+6520,"Veau, escalope cuite",1,0,0,1,0,,oui,
+6250,"Boeuf, steak haché 5% MG cru",1,0,0,1,0,,oui,
+36017,"Poulet, filet sans peau cru",1,0,0,1,0,,oui,
+36304,"Dinde, escalope crue",1,0,0,1,0,,oui,
+28925,"Jambon cuit, de Paris, découenné dégraissé",1,1,0,1,0,,oui,
+28800,Jambon cru,1,1,0,1,0,,oui,
+28964,Jambon de dinde ou blanc de dinde en tranche,1,0,0,1,0,,oui,Dinde ; pas de porc dans la recette courante.
+28720,"Lardon fumé, cru",1,1,0,1,0,,oui,
+30155,"Merguez, boeuf et mouton, cuite",1,0,0,1,0,sulfites,oui,Bœuf et mouton ; sulfites fréquents dans les merguez du commerce.
+30315,Chorizo,1,1,0,1,0,,oui,Porc ; lactose possible selon la marque.
+8211,Pâté ou terrine de campagne,1,1,0,1,0,oeufs,oui,"Porc et foie de porc ; œuf dans la plupart des recettes, lait possible."
+30300,Saucisson sec,1,1,0,1,0,lait,oui,Porc ; lactose fréquent dans les saucissons du commerce.
+30742,"Saucisse de Strasbourg ou knack, à cuire",1,1,0,1,0,,oui,Porc et bœuf dans la recette traditionnelle.
+30011,Saucisse de Toulouse cuite,1,1,0,1,0,,oui,Porc.
+20337,"Saucisse végétale au tofu (convient aux véganes ou végétaliens), préemballée",0,0,0,0,0,soja,oui,Tofu ; végan selon le libellé CIQUAL ; blé possible selon la marque.
+1030,"Fines tranches végétales, préemballées",0,0,0,1,0,soja|gluten|oeufs,oui,Alternative végétale au jambon : certaines recettes contiennent du blanc d'œuf (non végan par prudence) ; soja et blé fréquents.
+26025,"Cabillaud, cuit à la vapeur",0,0,1,1,0,poisson,oui,
+26192,"Lieu jaune ou colin, cuit",0,0,1,1,0,poisson,oui,
+26229,"Saumon, grillé/poêlé",0,0,1,1,0,poisson,oui,
+26136,"Sardine, grillée/poêlée",0,0,1,1,0,poisson,oui,
+26019,"Maquereau, rôti/cuit au four",0,0,1,1,0,poisson,oui,
+26041,"Thon, rôti/cuit au four",0,0,1,1,0,poisson,oui,
+26043,"Cabillaud, cru",0,0,1,1,0,poisson,oui,
+26036,"Saumon, élevage, cru",0,0,1,1,0,poisson,oui,
+26039,"Thon, au naturel, appertisé, égoutté",0,0,1,1,0,poisson,oui,
+26034,"Sardine, à l'huile, appertisée, égouttée",0,0,1,1,0,poisson,oui,
+26037,Saumon fumé,0,0,1,1,0,poisson,oui,
+26046,"Surimi, bâtonnets, tranche ou râpé saveur crabe",0,0,1,1,0,poisson|crustaces|oeufs|gluten,oui,"Chair de poisson, amidon de blé, blanc d'œuf, arôme crabe (crustacés)."
+26086,"Maquereau, filet sauce tomate, appertisé, égoutté",0,0,1,1,0,poisson,oui,Céleri possible dans la sauce selon la marque.
+10007,"Crevette, cuite",0,0,1,1,0,crustaces,oui,Sulfites possibles sur les crevettes du commerce.
+10013,"Moule, bouillie/cuite à l'eau",0,0,1,1,0,mollusques,oui,
+10037,"Calmar ou calamar ou encornet, bouilli/cuit à l'eau",0,0,1,1,0,mollusques,oui,
+10011,"Huître, sans précision, crue",0,0,1,1,0,mollusques,oui,
+22000,Oeuf cru,0,0,0,1,0,oeufs,oui,
+22010,Oeuf dur,0,0,0,1,0,oeufs,oui,
+22502,"Oeuf brouillé, avec matière grasse",0,0,0,1,0,oeufs|lait,oui,Matière grasse supposée beurre (prudence).
+22500,"Omelette nature, faite maison",0,0,0,1,0,oeufs|lait,oui,Beurre ou lait dans la recette maison courante (prudence).
+22001,"Oeuf, blanc (blanc d'oeuf), cru",0,0,0,1,0,oeufs,oui,
+19041,"Lait demi-écrémé, UHT",0,0,0,1,0,lait,oui,
+19023,"Lait entier, UHT",0,0,0,1,0,lait,oui,
+19050,"Lait écrémé, UHT",0,0,0,1,0,lait,oui,
+19027,"Lait concentré sucré, entier",0,0,0,1,0,lait,oui,
+19593,"Yaourt ou lait fermenté, nature",0,0,0,1,0,lait,oui,
+19594,"Yaourt ou lait fermenté, nature, 0% MG",0,0,0,1,0,lait,oui,
+19587,"Yaourt ou lait fermenté, aux fruits, sucré",0,0,0,1,0,lait,oui,
+19644,"Fromage blanc, nature, 0% MG",0,0,0,1,0,lait,oui,
+19646,"Fromage blanc, nature, 2-3% MG",0,0,0,1,0,lait,oui,
+19664,"Fromage frais type petit suisse, nature, 4% MG environ",0,0,0,1,0,lait,oui,
+19724,"Spécialité laitière riche en protéines, nature",0,0,0,1,0,lait,oui,
+19508,"Lait fermenté ou yaourt à boire, aromatisé, sucré",0,0,0,1,0,lait,oui,
+39200,"Crème dessert au chocolat, rayon frais",0,0,0,1,0,lait,oui,
+39212,"Riz au lait vanille, cannelle ou nature, rayon frais",0,0,0,1,0,lait,oui,
+19698,"Tiramisu au café, rayon frais",0,0,0,1,1,lait|oeufs|gluten,oui,"Mascarpone, œufs, biscuits à la cuillère (blé) ; alcool étiqueté : éthanol mesuré 1,8 g/100 g dans la recette CIQUAL."
+19693,"Dessert au soja, nature, sans sucres ajoutés, non enrichi, fermenté, rayon frais",0,0,0,0,0,soja,oui,Soja ; végan.
+12115,Emmental ou emmenthal,0,0,0,1,0,lait,oui,
+12110,Comté,0,0,0,1,0,lait,oui,
+12007,Camembert au lait pasteurisé,0,0,0,1,0,lait,oui,
+12066,"Feta, au lait de brebis 70% minimum et lait de chèvre 30% maximum",0,0,0,1,0,lait,oui,
+12812,Fromage de chèvre bûche,0,0,0,1,0,lait,oui,
+12805,"Fromage de chèvre frais, type palet, crottin ou bûchette",0,0,0,1,0,lait,oui,
+12120,Parmesan,0,0,0,1,0,lait,oui,
+19590,Mozzarella au lait de vache,0,0,0,1,0,lait,oui,
+12500,Roquefort (fromage de brebis),0,0,0,1,0,lait,oui,
+12045,Reblochon,0,0,0,1,0,lait,oui,
+12303,"Fromage fondu en portion (triangle), non enrichi",0,0,0,1,0,lait,oui,
+12068,"Fromage frais ou spécialité fromagère non affinée, nature, à tartiner, en barquette, non allégée en matière grasse",0,0,0,1,0,lait,oui,
+1029,"Spécialité végétale type fromage en tranche ou râpé, sans soja, préemballée",0,0,0,0,0,,oui,Alternative végétale sans soja ; végan selon le type de produit ; fruits à coque possibles selon la marque.
+19410,"Crème 30% MG, épaisse, rayon frais",0,0,0,1,0,lait,oui,
+19417,"Crème 30% MG, fluide, UHT",0,0,0,1,0,lait,oui,
+19420,"Crème chantilly, sous pression, UHT",0,0,0,1,0,lait,oui,
+18066,Eau du robinet,0,0,0,0,0,,oui,
+18045,"Eau minérale, embouteilée, plate (aliment moyen)",0,0,0,0,0,,oui,
+18004,"Café, non instantané, sans sucres ajoutés, prêt à boire",0,0,0,0,0,,oui,
+18020,"Thé infusé, sans sucres ajoutés",0,0,0,0,0,,oui,
+18022,"Tisane infusée ou infusion, sans sucres ajoutés",0,0,0,0,0,,oui,
+18104,"Chocolat chaud, boisson instantanée, sucrée, prête à boire (reconstituée avec du lait demi-écrémé)",0,0,0,1,0,lait,oui,Reconstitué avec du lait demi-écrémé ; soja (lécithine) possible.
+18018,"Cola, sucré",0,0,0,0,0,,oui,
+18060,"Cola, sans sucres ajoutés, avec édulcorants",0,0,0,0,0,,oui,
+18010,"Limonade, sucrée",0,0,0,0,0,,oui,
+18075,"Boisson au thé, aromatisée, sucrée",0,0,0,0,0,,oui,
+2070,"Jus d'orange, pur jus",0,0,0,0,0,,oui,
+2074,"Jus de pomme, pur jus",0,0,0,0,0,,oui,
+18901,"Boisson au soja, nature, enrichie en calcium, préemballée",0,0,0,0,0,soja,oui,
+18899,"Boisson à l'avoine, nature, sans sucres ajoutés, non enrichie, préemballée",0,0,0,0,0,gluten,oui,Avoine (céréale à gluten au sens du règlement).
+5214,Vin rouge,0,0,0,0,1,sulfites,oui,Vin.
+5215,Vin blanc sec,0,0,0,0,1,sulfites,oui,Vin.
+5216,Vin rosé,0,0,0,0,1,sulfites,oui,Vin.
+5001,"Bière ""coeur de marché"" (4-5° alcool)",0,0,0,0,1,gluten,oui,Orge maltée.
+5207,Champagne,0,0,0,0,1,sulfites,oui,Vin.
+5008,Bière faiblement alcoolisée (3° alcool),0,0,0,0,1,gluten,oui,"Orge maltée ; alcool : éthanol mesuré 2,23 g/100 g."
+5007,Cidre doux,0,0,0,0,1,sulfites,oui,"Pomme ; sulfites fréquents dans les cidres ; alcool : éthanol mesuré 1,91 g/100 g."
+5030,"Bière sans alcool (<1,2° alcool) et sans sucres ajoutés, aromatisée ou non",0,0,0,0,1,gluten,oui,"Orge maltée ; boisson du sous-groupe « boissons alcoolisées » ; éthanol mesuré 0,62 g/100 g (moins de 1,2 % vol.), au-dessus du seuil de 0,5 g : alcool étiqueté."
+31016,Sucre blanc,0,0,0,0,0,,oui,
+31008,Miel,0,0,0,1,0,,oui,Produit de la ruche : non végan.
+31034,Sirop d'érable,0,0,0,0,0,,oui,
+31087,Édulcorant à base d'extrait de stévia,0,0,0,0,0,,oui,
+31004,"Chocolat au lait, tablette",0,0,0,1,0,lait|soja,oui,Lait ; lécithine de soja fréquente ; traces de fruits à coque possibles.
+31074,"Chocolat noir 70 % de cacao environ, de dégustation, tablette",0,0,0,0,0,,oui,Lécithine de soja et traces de lait possibles selon la marque.
+31032,Pâte à tartiner chocolat et noisette,0,0,0,1,0,fruits_a_coque|lait|soja,oui,"Noisettes, lait en poudre, lécithine de soja."
+31000,Barre chocolatée biscuitée,0,0,0,1,0,gluten|lait|soja,oui,"Biscuit (blé), chocolat au lait, lécithine de soja."
+31001,Barre chocolatée non biscuitée enrobée,0,0,0,1,0,lait|soja|oeufs,oui,"Chocolat au lait, lécithine de soja, blanc d'œuf fréquent ; arachides selon la barre."
+31060,Bonbon gélifié,1,1,0,1,0,,oui,"Gélatine animale, souvent porcine : classé viande et porc par prudence (existe sans gélatine animale)."
+31024,Confiture de fraise (extra ou classique),0,0,0,0,0,,oui,
+7620,"Croissant pur beurre, artisanal",0,0,0,1,0,gluten|lait|oeufs,oui,"Farine de blé, beurre, dorure à l'œuf."
+7730,"Pain au chocolat, artisanal",0,0,0,1,0,gluten|lait|oeufs|soja,oui,"Farine de blé, beurre, œuf, chocolat (lécithine de soja fréquente)."
+7740,"Brioche nature, préemballée",0,0,0,1,0,gluten|oeufs|lait,oui,"Farine de blé, œufs, beurre ou lait."
+7710,"Pain au lait, artisanal",0,0,0,1,0,gluten|lait|oeufs,oui,"Farine de blé, lait, beurre, dorure à l'œuf."
+24015,Biscuit sec petit beurre,0,0,0,1,0,gluten|lait,oui,"Farine de blé, beurre, lait."
+24684,"Cookie au chocolat, préemballé",0,0,0,1,0,gluten|lait|oeufs|soja,oui,"Farine de blé, beurre, œuf, chocolat (lécithine de soja)."
+24034,"Biscuit sec pour petit déjeuner, sans chocolat, non enrichi",0,0,0,1,0,gluten|lait|soja,oui,"Céréales (blé, avoine) ; lait et soja fréquents."
+24231,"Goûter sec fourré (""sandwiché"") parfum chocolat",0,0,0,1,0,gluten|lait|soja,oui,Farine de blé ; fourrage au chocolat avec lait et lécithine de soja fréquents.
+24009,Spéculoos,0,0,0,0,0,gluten|soja,oui,Farine de blé ; farine de soja fréquente ; végan dans la recette courante.
+24018,"Biscuit sec sans gluten, petit beurre",0,0,0,1,0,lait,oui,Sans gluten (libellé CIQUAL) ; beurre ; œuf possible.
+32140,Flocons d'avoine,0,0,0,0,0,gluten,oui,Avoine (céréale à gluten au sens du règlement).
+32014,"Pétales de maïs nature, non enrichis en vitamines et minéraux",0,0,0,0,0,gluten,oui,Maïs et malt d'orge (gluten).
+32004,Muesli (aliment moyen),0,0,0,0,0,gluten|fruits_a_coque,oui,"Avoine, blé ; fruits à coque fréquents."
+32013,"Céréales pour petit déjeuner chocolatées, non fourrées, non enrichies en vitamines et minéraux",0,0,0,1,0,gluten|lait|soja,oui,"Céréales (blé, malt d'orge), cacao ; lait et lécithine de soja fréquents."
+31106,Barre céréalière au chocolat,0,0,0,1,0,gluten|lait|soja,oui,"Céréales, chocolat au lait ; fruits à coque possibles."
+23585,"Gâteau au chocolat, préemballé",0,0,0,1,0,gluten|oeufs|lait|soja,oui,"Farine de blé, œufs, beurre, chocolat (lécithine de soja). Alcool : « traces » dans CIQUAL, non étiqueté."
+23925,"Gâteau marbré au chocolat, préemballé",0,0,0,1,0,gluten|oeufs|lait,oui,"Farine de blé, œufs, beurre ou lait ; alcool non étiqueté : éthanol mesuré 0,1 g/100 g, sous le seuil de 0,5 g."
+24632,"Madeleine ordinaire, préemballée",0,0,0,1,0,gluten|oeufs|lait,oui,"Farine de blé, œufs, beurre."
+23799,"Crêpe, nature, préemballée, rayon frais",0,0,0,1,0,gluten|oeufs|lait,oui,"Farine de blé, œufs, lait."
+23801,"Galette de sarrasin, nature, souple (à garnir) préemballée",0,0,0,0,0,gluten,oui,Sarrasin ; farine de blé fréquente dans les galettes du commerce (prudence).
+23525,Flan pâtissier aux oeufs ou à la parisienne,0,0,0,1,0,gluten|oeufs|lait,oui,"Pâte (blé), œufs, lait."
+23490,Tarte ou tartelette aux pommes,0,0,0,1,0,gluten|lait|oeufs,oui,"Pâte (blé, beurre), œuf possible dans la pâte ou la garniture."
+23952,"Muffin, au chocolat, préemballé",0,0,0,1,0,gluten|oeufs|lait|soja,oui,"Farine de blé, œufs, lait, chocolat."
+39527,"Glace ou crème glacée, bac ou pot (aliment moyen)",0,0,0,1,0,lait,oui,"Lait, crème ; œuf présent dans certaines crèmes glacées."
+39524,"Sorbet, en bac",0,0,0,0,0,,oui,Fruits et sucre ; blanc d'œuf possible selon la marque.
+16400,"Beurre à 80% MG minimum, doux",0,0,0,1,0,lait,oui,
+16402,"Beurre à 80% MG, demi-sel",0,0,0,1,0,lait,oui,
+16590,"Matière grasse tartinable à teneur en MG > 62%, doux, standard",0,0,0,0,0,,oui,"Margarine : certaines recettes contiennent du lactosérum (lait). Alcool : « traces » dans CIQUAL, non étiqueté."
+17270,Huile d'olive vierge extra,0,0,0,0,0,,oui,
+17440,Huile de tournesol,0,0,0,0,0,,oui,
+17130,Huile de colza,0,0,0,0,0,,oui,
+17701,"Huile combinée, mélange d'huile d'olive et de graines",0,0,0,0,0,,oui,
+11008,"Ketchup, préemballé",0,0,0,0,0,,oui,Céleri possible selon la marque.
+11054,"Mayonnaise (70% MG min.), préemballée",0,0,0,1,0,oeufs|moutarde,oui,Jaune d'œuf et moutarde.
+11110,"Sauce vinaigrette (50 à 75% d'huile), préemballée",0,0,0,0,0,moutarde,oui,Moutarde fréquente ; sulfites possibles (vinaigre de vin).
+11101,"Sauce béchamel, préemballée",0,0,0,1,0,lait|gluten,oui,"Lait, beurre, farine de blé."
+11107,"Sauce tomate aux oignons, préemballée",0,0,0,0,0,,oui,Céleri possible selon la marque.
+11104,"Sauce soja, préemballée",0,0,0,0,0,soja|gluten,oui,Soja et blé.
+11179,"Sauce pesto, préemballée",0,0,0,1,0,lait|fruits_a_coque,oui,"Fromage (parmesan), noix de cajou fréquentes (les pignons ne figurent pas parmi les fruits à coque réglementaires)."
+11112,"Harissa (sauce au piment), préemballée",0,0,0,0,0,,oui,
+11013,Moutarde,0,0,0,0,0,moutarde|sulfites,oui,Graines de moutarde ; disulfite de potassium fréquent.
+11004,"Cornichon, au vinaigre",0,0,0,0,0,,oui,Sulfites possibles selon la marque.
+13033,"Olive verte, en saumure, égouttée",0,0,0,0,0,,oui,
+11091,Vinaigre balsamique,0,0,0,0,0,sulfites,oui,Vinaigre de vin : sulfites.
+18041,Lait de coco,0,0,0,0,0,,oui,La noix de coco ne fait pas partie des fruits à coque réglementaires.
+11058,"Sel blanc alimentaire, iodé, non fluoré (marin, ignigène ou gemme)",0,0,0,0,0,,oui,
+11000,"Ail, cru",0,0,0,0,0,,oui,
+11015,"Poivre noir, poudre",0,0,0,0,0,,oui,
+11014,"Persil, frais",0,0,0,0,0,,oui,
+20904,"Tofu nature, préemballé",0,0,0,0,0,soja,oui,
+20917,Tempeh,0,0,0,0,0,soja,oui,
+25598,"Seitan, préemballé",0,0,0,0,0,gluten|soja,oui,Gluten de blé ; sauce soja fréquente dans la marinade.
+20591,"Protéine de soja texturée, réhydratée",0,0,0,0,0,soja,oui,
+11214,"Préparation culinaire à base de soja, type ""crème de soja""",0,0,0,0,0,soja,oui,
+25621,"Houmous, préemballé",0,0,0,0,0,sesame,oui,Pois chiche et tahin (sésame).
+25620,"Guacamole, préemballé",0,0,0,0,0,,oui,
+19863,"Tzatziki à base de yaourt, préemballé",0,0,0,1,0,lait,oui,Yaourt.
