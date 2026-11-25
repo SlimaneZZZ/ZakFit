@@ -21,7 +21,35 @@ Le Visiteur devient Utilisateur en se connectant. L'Administrateur est un compte
 
 ## 2. Cas d'utilisation
 
-Le diagramme correspondant est `diagrammes/cas-utilisation.drawio`.
+Le diagramme `diagrammes/cas-utilisation.drawio` suit la méthode vue en cours : un seul diagramme, des cas d'utilisation larges et sans code, un cas « S'authentifier » inclus par tous ceux qui demandent d'être connecté. Les tableaux ci-dessous détaillent ces cas en cas plus fins, numérotés pour la traçabilité avec les user stories et les règles.
+
+| Cas du diagramme | Cas détaillés |
+|---|---|
+| S'inscrire | UC01 |
+| S'authentifier | UC02 (connexion), UC06 (déconnexion), UC30 (connexion au back-office) |
+| Compléter le questionnaire de démarrage | UC03 |
+| Donner son consentement santé | UC04 |
+| Gérer son profil | UC05 |
+| Retirer son consentement santé | UC28 |
+| Supprimer son compte | UC07 |
+| Gérer ses activités | UC08, UC10, UC11 |
+| Estimer les calories d'une activité | UC09 |
+| Synchroniser avec Santé | UC26 |
+| Gérer ses repas | UC14, UC18, UC19 |
+| Rechercher un aliment | UC12 |
+| Créer un aliment personnalisé | UC13 |
+| Gérer ses repas favoris | UC15, UC17 |
+| Analyser la photo d'un plat | UC16 |
+| Gérer ses objectifs | UC20, UC21 |
+| Suivre son poids | UC22, UC29 |
+| Consulter le tableau de bord | UC23 |
+| Consulter l'historique | UC24 |
+| Exporter l'historique en CSV | UC27 |
+| Régler ses rappels et messages | UC25 |
+| Gérer les utilisateurs | UC31, UC32, UC33 |
+| Gérer les aliments de base | UC34 |
+| Gérer les types d'activité | UC35 |
+| Consulter les statistiques globales | UC36 |
 
 ### App iOS
 
