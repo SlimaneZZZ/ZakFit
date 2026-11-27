@@ -189,7 +189,7 @@ def mcd_mld_md(fks, liaisons, ordre):
           "- **Listes de valeurs :** type `ENUM`, contrôlé par MariaDB.",
           "- **Dates :** `DATETIME(6)` en UTC pour les instants ; `DATE` pour les jours locaux (repas, pesées, énergie active), calculés dans le fuseau de l'utilisateur (RG23, RG38).",
           "- **Nombres :** `DECIMAL` pour les grammes et les kcal (pas d'erreur d'arrondi binaire, 02-formules.md §5).",
-          "- **Suppressions :** ON DELETE CASCADE pour les données d'un utilisateur (RG43) ; RESTRICT pour les référentiels, qu'on archive au lieu de supprimer (RG22, RG46) ; SET NULL pour l'unité d'une ligne.",
+          "- **Suppressions :** ON DELETE CASCADE pour les données d'un utilisateur (RG43) ; RESTRICT pour les référentiels, qu'on archive au lieu de supprimer (RG22, RG46), et pour l'unité d'une ligne, protégée par la clé composée (id_food_portion, id_food).",
           "- **Suppression d'un compte (RG43) :** les lignes de repas et de favoris protègent leur aliment (RESTRICT), y compris un aliment personnalisé. Le service supprime donc, dans une transaction : les repas, puis les favoris, puis le compte, dont la cascade efface le reste. La base refuse l'ordre inverse. Le test `modele/tester_sql.py` vérifie les deux cas.",
           "- **Contraintes de plusieurs lignes**, posées avec une colonne générée PERSISTENT et un index unique :",
           "  - un seul consentement actif par utilisateur (`health_consent.active_flag`) ;",
@@ -201,7 +201,7 @@ def mcd_mld_md(fks, liaisons, ordre):
           "  - un aliment personnalisé n'est lu et utilisé que par son créateur (RG19, RG09). Sans ce contrôle, un repas d'un autre utilisateur pourrait le référencer, et la suppression du compte du créateur échouerait (RESTRICT) ;",
           "  - calcul de l'objectif en mode computed (RG34) ; MET d'un type jamais modifié (RG29) ; rôle et protection de l'administrateur contre lui-même (RG07) ;",
           "  - correspondance des types de séance de Santé avec le référentiel (RG33).",
-          "- **Valeurs dérivées :** aucune n'est stockée (totaux, objectif calculé, kcal brûlées du jour), sauf trois valeurs figées volontairement : les valeurs d'une ligne de repas (RG25), les kcal estimées d'une séance (qui dépendent du poids au jour de la séance) et les versions de l'objectif calorique (RG52), pour qu'un bilan passé ne change pas quand l'objectif change.",
+          "- **Valeurs dérivées :** aucune n'est stockée (totaux, objectif calculé, kcal brûlées du jour), sauf quatre valeurs figées volontairement : les valeurs d'une ligne de repas (RG25), les kcal estimées d'une séance (qui dépendent du poids au jour de la séance), le jour local d'une séance (`performed_on`, pour regrouper par jour en SQL sans tables de fuseaux et garder le jour vécu) et les versions de l'objectif calorique (RG52), pour qu'un bilan passé ne change pas quand l'objectif change.",
           "- **Chiffrement au repos (p. 25) :** toutes les tables InnoDB sont chiffrées par MariaDB (`innodb_encrypt_tables = ON`, plugin `file_key_management`, clé hors du dépôt). C'est un réglage du serveur, sans effet sur le script ni sur le code. Mise en place prévue avec le socle Vapor (30/11), avec une preuve conservée sans secret : plugin chargé, variables actives, tables chiffrées (`information_schema.INNODB_TABLESPACES_ENCRYPTION`).",
           "- **Conservation :** pas de purge automatique en version 1. Les données d'un compte vivent tant que le compte existe ; l'utilisateur les efface lui-même (RG11, RG43). Une durée de conservation des comptes inactifs reste à décider avant toute mise en ligne (article 5.1.e du RGPD).",
           "- **Index de lecture :** " + ", ".join("`%s(%s)`" % (t, c) for t, _, c in M.INDEX) + ".",
@@ -307,6 +307,14 @@ def q(v):
     return "'" + str(v).replace("\\", "\\\\").replace("'", "''") + "'"
 
 
+def arrondi(v, decimales):
+    """Arrondit à la précision de la colonne (0,5 vers le haut) ; une valeur vide devient NULL."""
+    if v in (None, ""):
+        return "NULL"
+    from decimal import Decimal, ROUND_HALF_UP
+    return str(Decimal(v).quantize(Decimal(1).scaleb(-decimales), ROUND_HALF_UP))
+
+
 def h(x):
     return "UNHEX('%s')" % x
 
@@ -360,8 +368,8 @@ def sql_referentiels():
     for a in A:
         vals.append("  (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %d, %d, %d, %d, TRUE, FALSE, %s, %s, NULL)" % (
             h(uid("food", a["ciqual_code"])), q(a["ciqual_code"]), q(a["nom_fr"]), q(a["nom_en"]),
-            a["kcal_100g"], a["proteines_100g"], a["glucides_100g"], a["lipides_100g"],
-            a["fibres_100g"] or "NULL", a["alcool_100g"] or "NULL",
+            arrondi(a["kcal_100g"], 3), arrondi(a["proteines_100g"], 4), arrondi(a["glucides_100g"], 4), arrondi(a["lipides_100g"], 4),
+            arrondi(a["fibres_100g"], 4), arrondi(a["alcool_100g"], 4),
             int(a["viande"]), int(a["porc"]), int(a["produit_animal"]), int(a["alcool"]),
             q(DATE_CHARGEMENT), h(uid("food_group", a["groupe_code"]))))
     L.append("INSERT INTO food (id_food, ciqual_code, name_fr, name_en, kcal_100g, protein_100g, carbs_100g, fat_100g, "
@@ -510,6 +518,73 @@ def page_mld(fks, liaisons):
     return p
 
 
+def nom_classe(table):
+    return "".join(part.capitalize() for part in table.split("_"))
+
+
+def type_swift(sql):
+    t = sql.upper()
+    optionnel = " NULL" in t and "NOT NULL" not in t
+    if t.startswith("VARBINARY(16)"):
+        base = "UUID"
+    elif t.startswith("ENUM("):
+        base = "enum(" + ", ".join(v.strip("'") for v in sql[sql.index("(") + 1:sql.index(")")].split(",")) + ")"
+    elif t.startswith(("VARCHAR", "CHAR")):
+        base = "String"
+    elif t.startswith("DECIMAL"):
+        base = "Decimal"
+    elif t.startswith(("SMALLINT", "TINYINT", "INT")):
+        base = "Int"
+    elif t.startswith("BOOLEAN"):
+        base = "Bool"
+    elif t.startswith("DATETIME"):
+        base = "Date"
+    elif t.startswith("DATE"):
+        base = "LocalDate"
+    elif t.startswith("TIME"):
+        base = "String (hh:mm)"
+    else:
+        base = sql.split()[0]
+    return base + ("?" if optionnel else "")
+
+
+def multiplicite(card):
+    mini, maxi = card.split(",")
+    return "%s..%s" % (mini, "*" if maxi == "n" else maxi)
+
+
+# Décalages propres au diagramme de classes : certaines classes y sont plus larges que dans le MCD.
+DECALAGES_CLASSES = {"admin_action": (-150, 520), "muscle_group": (-1044, -680)}
+
+
+def page_classes():
+    """Diagramme de classes du domaine, au format du cours (LineUp) : visibilité, attributs typés, multiplicités.
+    Une cardinalité Merise se lit depuis l'entité ; la multiplicité UML s'écrit à l'autre bout."""
+    p = Page("classes", "UML - D.Classes", 3400, 2800)
+    p.v("&nbsp; Diagramme de classes — ZakFit", TITRE, 40, 40, 3300, 65)
+    ids = {}
+    for e in M.ENTITES:
+        lignes = []
+        for at in e["attributs"]:
+            vis = "-" if at[0].startswith("id_") or at[0] == "password_hash" else "~"
+            lignes.append("%s %s: %s" % (vis, at[0], type_swift(at[7])))
+        label = "<b>%s</b><hr>%s" % (nom_classe(e["nom"]), "<br>".join(esc(l) for l in lignes))
+        largeur = max(230, 10 + int(6.4 * max(len(l) for l in lignes)))
+        x, y = e["pos"]
+        dx, dy = DECALAGES_CLASSES.get(e["nom"], (0, 0))
+        ids[e["nom"]] = p.v(label, ENTITE + "strokeColor=#333333;fontSize=11;", x * 1.45 + dx, y * 1.12 + dy, largeur, 34 + 16 * len(lignes))
+    for a in M.ASSOCIATIONS:
+        ea, eb = a["a"][0], a["b"][0]
+        i = p.nid()
+        p.cells.append('<mxCell id="%s" value="%s" style="endArrow=none;html=1;rounded=0;fontFamily=Arial;fontSize=11;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="%s" target="%s"><mxGeometry relative="1" as="geometry"/></mxCell>'
+                       % (i, esc(a["verbe"]), ids[ea], ids[eb]))
+        for pos, texte in ((-0.75, multiplicite(a["b"][1])), (0.75, multiplicite(a["a"][1]))):
+            j = p.nid()
+            p.cells.append('<mxCell id="%s" value="%s" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="%s"><mxGeometry x="%s" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>'
+                           % (j, esc(texte), i, pos))
+    return p
+
+
 def main():
     controler()
     fks, liaisons = cles_etrangeres()
@@ -520,7 +595,7 @@ def main():
     open(os.path.join(RACINE, "sql", "01-schema.sql"), "w", encoding="utf-8").write(sql_schema(fks, liaisons, ordre))
     ref, na, np_, nfa = sql_referentiels()
     open(os.path.join(RACINE, "sql", "02-referentiels.sql"), "w", encoding="utf-8").write(ref)
-    pages = [page_dictionnaire(), page_mcd(), page_mld(fks, liaisons)]
+    pages = [page_dictionnaire(), page_mcd(), page_mld(fks, liaisons), page_classes()]
     open(os.path.join(RACINE, "diagrammes", "modelisation.drawio"), "w", encoding="utf-8").write(
         '<mxfile host="app.diagrams.net" agent="ZakFit">' + "".join(pg.xml() for pg in pages) + "</mxfile>")
     print("Modèle : %d entités, %d associations, %d tables de liaison" % (len(M.ENTITES), len(M.ASSOCIATIONS), len(liaisons)))

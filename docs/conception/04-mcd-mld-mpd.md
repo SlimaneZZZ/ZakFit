@@ -20,9 +20,9 @@ Notation du cours : entité en majuscules, identifiant souligné (ici en premier
 - **FAVORITE_ITEM** (<u>id_favorite_item</u>, quantity_g, portion_count) : un aliment d'un repas favori, avec sa quantité
 - **ACTIVITY_CATEGORY** (<u>id_activity_category</u>, code, name_fr, name_en) : une catégorie d'activité (cardio, musculation…)
 - **ACTIVITY_TYPE** (<u>id_activity_type</u>, compendium_code, name_fr, name_en, met, difficulty, instructions_fr, instructions_en, is_archived) : un type d'activité du Compendium 2024, avec son MET
-- **ACTIVITY** (<u>id_activity</u>, performed_at, duration_min, kcal, kcal_status, source, health_uuid, is_ignored, created_at, updated_at) : une séance d'activité physique d'un utilisateur
+- **ACTIVITY** (<u>id_activity</u>, performed_at, performed_on, duration_min, kcal, kcal_status, source, health_uuid, is_ignored, created_at, updated_at) : une séance d'activité physique d'un utilisateur
 - **DAILY_ACTIVE_ENERGY** (<u>id_daily_active_energy</u>, day, kcal, imported_at) : l'énergie active d'un jour, importée de l'app Santé
-- **WEIGH_IN** (<u>id_weigh_in</u>, weighed_on, weight_kg, source, health_uuid, created_at) : une pesée d'un utilisateur, un jour donné
+- **WEIGH_IN** (<u>id_weigh_in</u>, weighed_on, weight_kg, source, health_uuid, is_ignored, created_at) : une pesée d'un utilisateur, un jour donné
 - **CALORIE_GOAL** (<u>id_calorie_goal</u>, mode, manual_kcal, protein_g_target, carbs_g_target, fat_g_target, macros_custom, updated_at) : l'objectif calorique et la répartition des macros d'un utilisateur
 - **ACTIVITY_GOAL** (<u>id_activity_goal</u>, metric, period, target_value, valid_from, valid_to, created_at) : un objectif d'activité d'un utilisateur
 - **REMINDER_SETTING** (<u>id_reminder_setting</u>, kind, is_enabled, send_time) : le réglage d'un type de rappel ou de message pour un utilisateur
@@ -83,9 +83,9 @@ Notation du cours : `TABLE(clé_primaire, attribut, #clé_étrangère)`. Les cl�
 - `favorite_item`(<u>id_favorite_item</u>, quantity_g, portion_count, #id_favorite_meal, #id_food, #id_food_portion)
 - `activity_category`(<u>id_activity_category</u>, code, name_fr, name_en)
 - `activity_type`(<u>id_activity_type</u>, compendium_code, name_fr, name_en, met, difficulty, instructions_fr, instructions_en, is_archived, #id_activity_category)
-- `activity`(<u>id_activity</u>, performed_at, duration_min, kcal, kcal_status, source, health_uuid, is_ignored, created_at, updated_at, #id_user, #id_activity_type)
+- `activity`(<u>id_activity</u>, performed_at, performed_on, duration_min, kcal, kcal_status, source, health_uuid, is_ignored, created_at, updated_at, #id_user, #id_activity_type)
 - `daily_active_energy`(<u>id_daily_active_energy</u>, day, kcal, imported_at, #id_user)
-- `weigh_in`(<u>id_weigh_in</u>, weighed_on, weight_kg, source, health_uuid, created_at, #id_user)
+- `weigh_in`(<u>id_weigh_in</u>, weighed_on, weight_kg, source, health_uuid, is_ignored, created_at, #id_user)
 - `calorie_goal`(<u>id_calorie_goal</u>, mode, manual_kcal, protein_g_target, carbs_g_target, fat_g_target, macros_custom, updated_at, #id_user)
 - `activity_goal`(<u>id_activity_goal</u>, metric, period, target_value, valid_from, valid_to, created_at, #id_user, #id_activity_category)
 - `reminder_setting`(<u>id_reminder_setting</u>, kind, is_enabled, send_time, #id_user)
@@ -103,7 +103,7 @@ Notation du cours : `TABLE(clé_primaire, attribut, #clé_étrangère)`. Les cl�
 - **Listes de valeurs :** type `ENUM`, contrôlé par MariaDB.
 - **Dates :** `DATETIME(6)` en UTC pour les instants ; `DATE` pour les jours locaux (repas, pesées, énergie active), calculés dans le fuseau de l'utilisateur (RG23, RG38).
 - **Nombres :** `DECIMAL` pour les grammes et les kcal (pas d'erreur d'arrondi binaire, 02-formules.md §5).
-- **Suppressions :** ON DELETE CASCADE pour les données d'un utilisateur (RG43) ; RESTRICT pour les référentiels, qu'on archive au lieu de supprimer (RG22, RG46) ; SET NULL pour l'unité d'une ligne.
+- **Suppressions :** ON DELETE CASCADE pour les données d'un utilisateur (RG43) ; RESTRICT pour les référentiels, qu'on archive au lieu de supprimer (RG22, RG46), et pour l'unité d'une ligne, protégée par la clé composée (id_food_portion, id_food).
 - **Suppression d'un compte (RG43) :** les lignes de repas et de favoris protègent leur aliment (RESTRICT), y compris un aliment personnalisé. Le service supprime donc, dans une transaction : les repas, puis les favoris, puis le compte, dont la cascade efface le reste. La base refuse l'ordre inverse. Le test `modele/tester_sql.py` vérifie les deux cas.
 - **Contraintes de plusieurs lignes**, posées avec une colonne générée PERSISTENT et un index unique :
   - un seul consentement actif par utilisateur (`health_consent.active_flag`) ;
@@ -115,7 +115,7 @@ Notation du cours : `TABLE(clé_primaire, attribut, #clé_étrangère)`. Les cl�
   - un aliment personnalisé n'est lu et utilisé que par son créateur (RG19, RG09). Sans ce contrôle, un repas d'un autre utilisateur pourrait le référencer, et la suppression du compte du créateur échouerait (RESTRICT) ;
   - calcul de l'objectif en mode computed (RG34) ; MET d'un type jamais modifié (RG29) ; rôle et protection de l'administrateur contre lui-même (RG07) ;
   - correspondance des types de séance de Santé avec le référentiel (RG33).
-- **Valeurs dérivées :** aucune n'est stockée (totaux, objectif calculé, kcal brûlées du jour), sauf trois valeurs figées volontairement : les valeurs d'une ligne de repas (RG25), les kcal estimées d'une séance (qui dépendent du poids au jour de la séance) et les versions de l'objectif calorique (RG52), pour qu'un bilan passé ne change pas quand l'objectif change.
+- **Valeurs dérivées :** aucune n'est stockée (totaux, objectif calculé, kcal brûlées du jour), sauf quatre valeurs figées volontairement : les valeurs d'une ligne de repas (RG25), les kcal estimées d'une séance (qui dépendent du poids au jour de la séance), le jour local d'une séance (`performed_on`, pour regrouper par jour en SQL sans tables de fuseaux et garder le jour vécu) et les versions de l'objectif calorique (RG52), pour qu'un bilan passé ne change pas quand l'objectif change.
 - **Chiffrement au repos (p. 25) :** toutes les tables InnoDB sont chiffrées par MariaDB (`innodb_encrypt_tables = ON`, plugin `file_key_management`, clé hors du dépôt). C'est un réglage du serveur, sans effet sur le script ni sur le code. Mise en place prévue avec le socle Vapor (30/11), avec une preuve conservée sans secret : plugin chargé, variables actives, tables chiffrées (`information_schema.INNODB_TABLESPACES_ENCRYPTION`).
 - **Conservation :** pas de purge automatique en version 1. Les données d'un compte vivent tant que le compte existe ; l'utilisateur les efface lui-même (RG11, RG43). Une durée de conservation des comptes inactifs reste à décider avant toute mise en ligne (article 5.1.e du RGPD).
-- **Index de lecture :** `meal(id_user, eaten_on)`, `meal(eaten_on, meal_type)`, `activity(performed_at)`, `user(created_at)`, `login_event(id_user, logged_in_at)`, `activity(id_user, performed_at)`, `weigh_in(id_user, weighed_on)`, `food(name_fr)`, `food(name_en)`.
+- **Index de lecture :** `meal(id_user, eaten_on)`, `meal(eaten_on, meal_type)`, `activity(performed_on)`, `user(created_at)`, `login_event(id_user, logged_in_at)`, `activity(id_user, performed_on)`, `weigh_in(id_user, weighed_on)`, `food(name_fr)`, `food(name_en)`.

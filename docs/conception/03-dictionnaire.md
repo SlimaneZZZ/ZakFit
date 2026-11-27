@@ -97,9 +97,10 @@ Une occurrence : une pesée d'un utilisateur, un jour donné.
 |---|---|---|---|---|---|---|
 | `id_weigh_in` | Identifiant de la pesée | Identifiant | UUID | Clé primaire | Système | À l'ajout |
 | `weighed_on` | Date locale de la pesée | Date | AAAA-MM-JJ | Obligatoire ; une pesée par jour et par utilisateur (RG39) | Utilisateur ou Santé | À l'ajout |
-| `weight_kg` | Poids | Numérique | Décimal, 2 décimales, en kg | Obligatoire, 30 à 300 (RG13) | Utilisateur ou Santé | À l'ajout et à la modification |
+| `weight_kg` | Poids | Numérique | Décimal, 2 décimales, en kg | Obligatoire, 30 à 300 (RG13) ; effacé quand la pesée importée est ignorée (minimisation, RG39) | Utilisateur ou Santé | À l'ajout et à la modification |
 | `source` | Origine de la pesée | Liste | manual, health | Obligatoire ; une saisie l'emporte sur Santé le même jour (RG39) | Système | À l'ajout |
 | `health_uuid` | Identifiant de l'objet dans l'app Santé | Identifiant | UUID | Facultatif ; obligatoire si source = health | Santé | À l'import ou à l'écriture dans Santé |
+| `is_ignored` | Pesée importée supprimée par l'utilisateur, à ne pas réimporter | Booléen | Vrai ou faux | Obligatoire, faux par défaut ; seulement pour une pesée importée, dont le poids est alors effacé (RG39) | Utilisateur | À la suppression d'une pesée importée |
 | `created_at` | Date d'enregistrement | Date et heure | UTC | Obligatoire | Système | À l'ajout |
 
 ## Objectifs
@@ -181,12 +182,12 @@ Une occurrence : un aliment, de base (CIQUAL ou ajouté par un administrateur) o
 | `ciqual_code` | Code CIQUAL de l'aliment | Alphanumérique | 10 caractères au plus | Unique ; vide pour un aliment personnalisé ou ajouté par un administrateur (RG19) | CIQUAL 2025 | Au chargement du référentiel |
 | `name_fr` | Nom français | Alphanumérique | 150 caractères au plus | Obligatoire | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
 | `name_en` | Nom anglais | Alphanumérique | 150 caractères au plus | Obligatoire pour un aliment de base, facultatif pour un aliment personnalisé (RG49) | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
-| `kcal_100g` | Énergie pour 100 g (règlement UE 1169/2011) | Numérique | Décimal, 2 décimales | Obligatoire, 0 à 900 ; cohérente avec les macros (RG18) | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
-| `protein_100g` | Protéines pour 100 g | Numérique | Décimal, 2 décimales, en g | Obligatoire, 0 à 100 (RG18) | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
-| `carbs_100g` | Glucides pour 100 g | Numérique | Décimal, 2 décimales, en g | Obligatoire, 0 à 100 (RG18) | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
-| `fat_100g` | Lipides pour 100 g | Numérique | Décimal, 2 décimales, en g | Obligatoire, 0 à 100 ; P + G + L ≤ 100 g, ou 100,5 g pour un aliment de base (RG18) | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
-| `fiber_100g` | Fibres pour 100 g | Numérique | Décimal, 2 décimales, en g | Facultatif (inconnu) ; 0 à 100 | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
-| `alcohol_100g` | Alcool (éthanol) pour 100 g | Numérique | Décimal, 2 décimales, en g | Facultatif (inconnu) ; 0 à 100 | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
+| `kcal_100g` | Énergie pour 100 g (règlement UE 1169/2011) | Numérique | Décimal, 3 décimales (précision de CIQUAL) | Obligatoire, 0 à 900 ; cohérente avec les macros (RG18) | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
+| `protein_100g` | Protéines pour 100 g | Numérique | Décimal, 4 décimales, en g | Obligatoire, 0 à 100 (RG18) | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
+| `carbs_100g` | Glucides pour 100 g | Numérique | Décimal, 4 décimales, en g | Obligatoire, 0 à 100 (RG18) | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
+| `fat_100g` | Lipides pour 100 g | Numérique | Décimal, 4 décimales, en g | Obligatoire, 0 à 100 ; P + G + L ≤ 100 g, ou 100,5 g pour un aliment de base (RG18) | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
+| `fiber_100g` | Fibres pour 100 g | Numérique | Décimal, 4 décimales, en g | Facultatif (inconnu) ; 0 à 100 | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
+| `alcohol_100g` | Alcool (éthanol) pour 100 g | Numérique | Décimal, 4 décimales, en g | Facultatif (inconnu) ; 0 à 100 | CIQUAL 2025, administrateur ou utilisateur | À l'ajout et à la modification |
 | `contains_meat` | Contient de la viande ou de la gélatine | Booléen | Vrai ou faux | Obligatoire ; implique contains_animal_product (RG21) | Étiquetage ZakFit ou utilisateur | À l'ajout et à la modification |
 | `contains_pork` | Contient ou peut contenir du porc | Booléen | Vrai ou faux | Obligatoire ; implique contains_meat (RG21) | Étiquetage ZakFit ou utilisateur | À l'ajout et à la modification |
 | `contains_animal_product` | Contient un produit animal (exclu du régime végan) | Booléen | Vrai ou faux | Obligatoire (RG21) | Étiquetage ZakFit ou utilisateur | À l'ajout et à la modification |
@@ -204,7 +205,7 @@ Une occurrence : une unité de mesure d'un aliment, avec son poids (« 1 œuf mo
 | `id_food_portion` | Identifiant de la portion | Identifiant | UUID | Clé primaire | Système | À l'ajout |
 | `label_fr` | Libellé français de l'unité | Alphanumérique | 120 caractères au plus | Obligatoire (RG20) | USDA SR Legacy adapté, ou estimation | À l'ajout et à la modification |
 | `label_en` | Libellé anglais de l'unité | Alphanumérique | 120 caractères au plus | Obligatoire pour un aliment de base ; pour un aliment personnalisé, l'API recopie label_fr (RG49) | USDA SR Legacy adapté, estimation ou utilisateur | À l'ajout et à la modification |
-| `grams` | Poids d'une unité | Numérique | Décimal, 1 décimale, en g | Obligatoire, plus de 0 et 2 000 au plus (RG20) | USDA SR Legacy adapté, ou estimation | À l'ajout et à la modification |
+| `grams` | Poids d'une unité | Numérique | Décimal, 2 décimales, en g | Obligatoire, plus de 0 et 2 000 au plus (RG20) | USDA SR Legacy adapté, ou estimation | À l'ajout et à la modification |
 | `provenance` | Provenance du poids de l'unité | Alphanumérique | 200 caractères au plus (ex. USDA SR Legacy fdc_id=171287) | Facultatif | Système | À l'ajout |
 
 ### MEAL
@@ -265,6 +266,7 @@ Une occurrence : une séance d'activité physique d'un utilisateur.
 |---|---|---|---|---|---|---|
 | `id_activity` | Identifiant de la séance | Identifiant | UUID | Clé primaire | Système | À l'ajout |
 | `performed_at` | Début de la séance | Date et heure | UTC | Obligatoire ; pas dans le futur (RG30) | Utilisateur ou Santé | À l'ajout et à la modification |
+| `performed_on` | Jour local de la séance, figé à l'enregistrement dans le fuseau de l'utilisateur | Date | AAAA-MM-JJ | Obligatoire ; calculé par l'API depuis performed_at et time_zone (RG38) | Calcul interne | À l'ajout et quand performed_at change |
 | `duration_min` | Durée | Numérique | Entier, en minutes | Obligatoire, 1 à 600 (RG30) | Utilisateur ou Santé | À l'ajout et à la modification |
 | `kcal` | Calories brûlées par la séance | Numérique | Décimal, 2 décimales | Facultatif, 0 à 5 000 ; vide si non renseignées (RG31) | Utilisateur, Santé ou calcul interne (MET net) | À l'ajout et à la modification |
 | `kcal_status` | État des calories | Liste | entered, estimated, unknown | Obligatoire ; unknown si et seulement si kcal est vide (RG31) | Système | À l'ajout et à la modification |

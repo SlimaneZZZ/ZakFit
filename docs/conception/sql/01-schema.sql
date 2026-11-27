@@ -77,12 +77,12 @@ CREATE TABLE `food` (
   ciqual_code VARCHAR(10) NULL,
   name_fr VARCHAR(150) NOT NULL,
   name_en VARCHAR(150) NULL,
-  kcal_100g DECIMAL(6,2) NOT NULL,
-  protein_100g DECIMAL(5,2) NOT NULL,
-  carbs_100g DECIMAL(5,2) NOT NULL,
-  fat_100g DECIMAL(5,2) NOT NULL,
-  fiber_100g DECIMAL(5,2) NULL,
-  alcohol_100g DECIMAL(5,2) NULL,
+  kcal_100g DECIMAL(7,3) NOT NULL,
+  protein_100g DECIMAL(8,4) NOT NULL,
+  carbs_100g DECIMAL(8,4) NOT NULL,
+  fat_100g DECIMAL(8,4) NOT NULL,
+  fiber_100g DECIMAL(8,4) NULL,
+  alcohol_100g DECIMAL(8,4) NULL,
   contains_meat BOOLEAN NOT NULL DEFAULT FALSE,
   contains_pork BOOLEAN NOT NULL DEFAULT FALSE,
   contains_animal_product BOOLEAN NOT NULL DEFAULT FALSE,
@@ -109,7 +109,7 @@ CREATE TABLE `food_portion` (
   id_food_portion VARBINARY(16) NOT NULL,
   label_fr VARCHAR(120) NOT NULL,
   label_en VARCHAR(120) NULL,
-  grams DECIMAL(6,1) NOT NULL,
+  grams DECIMAL(7,2) NOT NULL,
   provenance VARCHAR(200) NULL,
   id_food VARBINARY(16) NOT NULL,
   CONSTRAINT pk_food_portion PRIMARY KEY (id_food_portion),
@@ -207,6 +207,7 @@ CREATE TABLE `activity_type` (
 CREATE TABLE `activity` (
   id_activity VARBINARY(16) NOT NULL,
   performed_at DATETIME(6) NOT NULL,
+  performed_on DATE NOT NULL,
   duration_min SMALLINT NOT NULL,
   kcal DECIMAL(7,2) NULL,
   kcal_status ENUM('entered','estimated','unknown') NOT NULL,
@@ -243,15 +244,17 @@ CREATE TABLE `daily_active_energy` (
 CREATE TABLE `weigh_in` (
   id_weigh_in VARBINARY(16) NOT NULL,
   weighed_on DATE NOT NULL,
-  weight_kg DECIMAL(5,2) NOT NULL,
+  weight_kg DECIMAL(5,2) NULL,
   source ENUM('manual','health') NOT NULL DEFAULT 'manual',
   health_uuid VARBINARY(16) NULL,
+  is_ignored BOOLEAN NOT NULL DEFAULT FALSE,
   created_at DATETIME(6) NOT NULL,
   id_user VARBINARY(16) NOT NULL,
   CONSTRAINT pk_weigh_in PRIMARY KEY (id_weigh_in),
   CONSTRAINT fk_weigh_in_user FOREIGN KEY (id_user) REFERENCES `user` (id_user) ON DELETE CASCADE,
   CONSTRAINT uq_weigh_in_day UNIQUE (id_user, weighed_on),
-  CONSTRAINT ck_weigh_in_weight CHECK (weight_kg BETWEEN 30 AND 300),
+  CONSTRAINT ck_weigh_in_ignored CHECK (is_ignored = FALSE OR source = 'health'),
+  CONSTRAINT ck_weigh_in_weight CHECK ((is_ignored = FALSE AND weight_kg IS NOT NULL AND weight_kg BETWEEN 30 AND 300) OR (is_ignored = TRUE AND weight_kg IS NULL)),
   CONSTRAINT ck_weigh_in_health_uuid CHECK (source = 'manual' OR health_uuid IS NOT NULL)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -374,10 +377,10 @@ CREATE TABLE `activity_type_muscle_group` (
 
 CREATE INDEX ix_meal_user_day ON `meal` (id_user, eaten_on);
 CREATE INDEX ix_meal_day_type ON `meal` (eaten_on, meal_type);
-CREATE INDEX ix_activity_date ON `activity` (performed_at);
+CREATE INDEX ix_activity_date ON `activity` (performed_on);
 CREATE INDEX ix_user_created ON `user` (created_at);
 CREATE INDEX ix_login_event_user_date ON `login_event` (id_user, logged_in_at);
-CREATE INDEX ix_activity_user_date ON `activity` (id_user, performed_at);
+CREATE INDEX ix_activity_user_date ON `activity` (id_user, performed_on);
 CREATE INDEX ix_weigh_in_user_day ON `weigh_in` (id_user, weighed_on);
 CREATE INDEX ix_food_name_fr ON `food` (name_fr);
 CREATE INDEX ix_food_name_en ON `food` (name_en);

@@ -44,14 +44,14 @@ PREPARATION = [
     "VALUES (UNHEX(REPLACE(UUID(),'-','')), 150, 247.5, 46.5, 0, 5.4, UNHEX('55555555555555555555555555555555'), %s)" % FOOD_BASE,
     "INSERT INTO meal_item (id_meal_item, quantity_g, portion_count, kcal, protein_g, carbs_g, fat_g, id_meal, id_food, id_food_portion) "
     "VALUES (UNHEX(REPLACE(UUID(),'-','')), 90, 1, 342, 4.5, 45, 16.2, UNHEX('55555555555555555555555555555555'), UNHEX('44444444444444444444444444444444'), UNHEX('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'))",
-    "INSERT INTO activity (id_activity, performed_at, duration_min, kcal, kcal_status, created_at, updated_at, id_user, id_activity_type) "
-    "VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, 30, NULL, 'unknown', %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE),
+    "INSERT INTO activity (id_activity, performed_at, performed_on, duration_min, kcal, kcal_status, created_at, updated_at, id_user, id_activity_type) "
+    "VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, '2026-11-25', 30, NULL, 'unknown', %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE),
     "INSERT INTO weigh_in (id_weigh_in, weighed_on, weight_kg, created_at, id_user) VALUES (UNHEX(REPLACE(UUID(),'-','')), '2026-11-25', 72.4, %s, %s)" % (NOW, U1),
     "INSERT INTO weigh_in (id_weigh_in, weighed_on, weight_kg, source, health_uuid, created_at, id_user) VALUES (UNHEX(REPLACE(UUID(),'-','')), '2026-11-20', 73.0, 'health', UNHEX('99999999999999999999999999999999'), %s, %s)" % (NOW, U1),
-    "INSERT INTO activity (id_activity, performed_at, duration_min, kcal, kcal_status, created_at, updated_at, id_user, id_activity_type) "
-    "VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, 45, 291, 'estimated', %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE),
-    "INSERT INTO activity (id_activity, performed_at, duration_min, kcal, kcal_status, source, health_uuid, created_at, updated_at, id_user, id_activity_type) "
-    "VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, 40, 350, 'entered', 'health', UNHEX('88888888888888888888888888888888'), %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE),
+    "INSERT INTO activity (id_activity, performed_at, performed_on, duration_min, kcal, kcal_status, created_at, updated_at, id_user, id_activity_type) "
+    "VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, '2026-11-25', 45, 291, 'estimated', %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE),
+    "INSERT INTO activity (id_activity, performed_at, performed_on, duration_min, kcal, kcal_status, source, health_uuid, created_at, updated_at, id_user, id_activity_type) "
+    "VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, '2026-11-25', 40, 350, 'entered', 'health', UNHEX('88888888888888888888888888888888'), %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE),
     "INSERT INTO daily_active_energy (id_daily_active_energy, day, kcal, imported_at, id_user) VALUES (UNHEX(REPLACE(UUID(),'-','')), '2026-11-25', 620, %s, %s)" % (NOW, U1),
     "INSERT INTO food_allergen (id_food, id_allergen) SELECT UNHEX('44444444444444444444444444444444'), id_allergen FROM allergen WHERE code = 'oeufs'",
     "INSERT INTO calorie_goal (id_calorie_goal, mode, protein_g_target, carbs_g_target, fat_g_target, updated_at, id_user) VALUES (UNHEX('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'), 'computed', 94, 299, 102, %s, %s)" % (NOW, U1),
@@ -82,9 +82,9 @@ INTERDITS = [
     ("RG49 aliment de base sans nom anglais", "INSERT INTO food (id_food, name_fr, kcal_100g, protein_100g, carbs_100g, fat_100g, created_at) VALUES (UNHEX(REPLACE(UUID(),'-','')), 'X', 100, 1, 1, 1, %s)" % NOW),
     ("RG24 ligne de 0 g", "INSERT INTO meal_item (id_meal_item, quantity_g, kcal, protein_g, carbs_g, fat_g, id_meal, id_food) VALUES (UNHEX(REPLACE(UUID(),'-','')), 0, 0, 0, 0, 0, UNHEX('55555555555555555555555555555555'), %s)" % FOOD_BASE),
     ("R1 ligne vers un aliment inconnu", "INSERT INTO meal_item (id_meal_item, quantity_g, kcal, protein_g, carbs_g, fat_g, id_meal, id_food) VALUES (UNHEX(REPLACE(UUID(),'-','')), 10, 0, 0, 0, 0, UNHEX('55555555555555555555555555555555'), UNHEX('00000000000000000000000000000000'))"),
-    ("RG30 séance de 0 min", "INSERT INTO activity (id_activity, performed_at, duration_min, kcal, kcal_status, created_at, updated_at, id_user, id_activity_type) VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, 0, 10, 'entered', %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE)),
-    ("RG31 kcal vides mais état « saisies »", "INSERT INTO activity (id_activity, performed_at, duration_min, kcal, kcal_status, created_at, updated_at, id_user, id_activity_type) VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, 20, NULL, 'entered', %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE)),
-    ("RG33 séance importée sans identifiant Santé", "INSERT INTO activity (id_activity, performed_at, duration_min, kcal, kcal_status, source, created_at, updated_at, id_user, id_activity_type) VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, 20, 100, 'entered', 'health', %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE)),
+    ("RG30 séance de 0 min", "INSERT INTO activity (id_activity, performed_at, performed_on, duration_min, kcal, kcal_status, created_at, updated_at, id_user, id_activity_type) VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, '2026-11-25', 0, 10, 'entered', %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE)),
+    ("RG31 kcal vides mais état « saisies »", "INSERT INTO activity (id_activity, performed_at, performed_on, duration_min, kcal, kcal_status, created_at, updated_at, id_user, id_activity_type) VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, '2026-11-25', 20, NULL, 'entered', %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE)),
+    ("RG33 séance importée sans identifiant Santé", "INSERT INTO activity (id_activity, performed_at, performed_on, duration_min, kcal, kcal_status, source, created_at, updated_at, id_user, id_activity_type) VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, '2026-11-25', 20, 100, 'entered', 'health', %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE)),
     ("RG39 deux pesées le même jour", "INSERT INTO weigh_in (id_weigh_in, weighed_on, weight_kg, created_at, id_user) VALUES (UNHEX(REPLACE(UUID(),'-','')), '2026-11-25', 72.0, %s, %s)" % (NOW, U1)),
     ("RG13 pesée de 25 kg", "INSERT INTO weigh_in (id_weigh_in, weighed_on, weight_kg, created_at, id_user) VALUES (UNHEX(REPLACE(UUID(),'-','')), '2026-11-24', 25, %s, %s)" % (NOW, U1)),
     ("RG36 objectif de protéines négatif", "UPDATE calorie_goal SET protein_g_target = -5 WHERE id_user = %s" % U1),
@@ -109,9 +109,11 @@ INTERDITS = [
     ("RG29 groupe musculaire en double sur un type", "INSERT INTO activity_type_muscle_group (id_activity_type, id_muscle_group) SELECT t.id_activity_type, m.id_muscle_group FROM activity_type t, muscle_group m WHERE t.compendium_code = '12050' AND m.code = 'legs'"),
     ("RG29 difficulté inconnue", "UPDATE activity_type SET difficulty = 'extreme' WHERE compendium_code = '12050'"),
     ("RG35 valeur saisie gardée en mode calculé", "UPDATE calorie_goal SET manual_kcal = 2000 WHERE id_user = %s" % U1),
-    ("RG33 même séance de Santé importée deux fois", "INSERT INTO activity (id_activity, performed_at, duration_min, kcal, kcal_status, source, health_uuid, created_at, updated_at, id_user, id_activity_type) VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, 40, 350, 'entered', 'health', UNHEX('88888888888888888888888888888888'), %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE)),
+    ("RG33 même séance de Santé importée deux fois", "INSERT INTO activity (id_activity, performed_at, performed_on, duration_min, kcal, kcal_status, source, health_uuid, created_at, updated_at, id_user, id_activity_type) VALUES (UNHEX(REPLACE(UUID(),'-','')), %s, '2026-11-25', 40, 350, 'entered', 'health', UNHEX('88888888888888888888888888888888'), %s, %s, %s, %s)" % (NOW, NOW, NOW, U1, TYPE_COURSE)),
     ("RG33 séance saisie marquée ignorée", "UPDATE activity SET is_ignored = TRUE WHERE id_user = %s AND source = 'manual'" % U1),
     ("RG40 deux valeurs d'énergie active le même jour", "INSERT INTO daily_active_energy (id_daily_active_energy, day, kcal, imported_at, id_user) VALUES (UNHEX(REPLACE(UUID(),'-','')), '2026-11-25', 100, %s, %s)" % (NOW, U1)),
+    ("RG39 pesée ignorée qui garde son poids", "UPDATE weigh_in SET is_ignored = TRUE WHERE id_user = %s AND source = 'health'" % U1),
+    ("RG39 pesée active sans poids", "UPDATE weigh_in SET weight_kg = NULL WHERE id_user = %s AND source = 'manual'" % U1),
     ("RG39 pesée importée sans identifiant Santé", "INSERT INTO weigh_in (id_weigh_in, weighed_on, weight_kg, source, created_at, id_user) VALUES (UNHEX(REPLACE(UUID(),'-','')), '2026-11-19', 73, 'health', %s, %s)" % (NOW, U1)),
     ("RG46 supprimer un type d'activité utilisé", "DELETE FROM activity_type WHERE compendium_code = '12050'"),
     ("RG48 supprimer un administrateur qui a des actions journalisées", "DELETE FROM `user` WHERE id_user = %s" % ADMIN),

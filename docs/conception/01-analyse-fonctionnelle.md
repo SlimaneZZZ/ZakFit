@@ -413,10 +413,11 @@ Chaque règle est vérifiée par l'API, ou par l'app quand elle est locale (RG08
   - une valeur strictement positive.
 
   Un objectif a une **période de validité** (premier et dernier jour). Le modifier clôt la ligne en cours et en crée une nouvelle. Le trio métrique, période, catégorie n'a qu'un objectif en cours par utilisateur. Un bilan passé se compare donc à l'objectif qui s'appliquait ce jour-là.
-- **RG38** — La semaine va du lundi au dimanche (ISO 8601), et le mois est le mois civil, tous deux dans le fuseau de l'utilisateur.
+- **RG38** — La semaine va du lundi au dimanche (ISO 8601), et le mois est le mois civil, tous deux dans le fuseau de l'utilisateur. Le jour local d'un repas (`eaten_on`) et d'une séance (`performed_on`) est figé à l'enregistrement : changer de fuseau ne déplace pas les jours passés.
 - **RG39** — Une pesée a une date, un poids (RG13) et une origine (saisie ou Santé).
   - On compte au plus une pesée par jour et par utilisateur.
   - Le même jour, une pesée saisie l'emporte sur une pesée importée.
+  - Supprimer une pesée importée la marque comme ignorée, pour qu'elle ne revienne pas au prochain import, comme une séance (RG33). Son poids est effacé : seuls restent son jour et son identifiant Santé (minimisation).
   - **Le poids du profil n'est pas stocké à part** : c'est celui de la dernière pesée, ce qui évite d'enregistrer la même information deux fois.
 - **RG40** — **Les kcal brûlées** d'un jour sont la somme des kcal des séances de ce jour, saisies ou importées de Santé (sans doublon, RG33), hors séances non renseignées (RG31). Cette valeur sert aux objectifs, au tableau de bord et aux rapports.
   - L'**énergie active** de Santé, qui compte aussi les déplacements du quotidien, est affichée à part, à titre d'information. Elle n'entre dans aucun calcul.
