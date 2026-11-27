@@ -63,8 +63,8 @@ ALLERGENES_MER = {"crustaces", "poisson", "mollusques"}
 DRAPEAUX = ["viande", "porc", "poisson_fruits_de_mer", "produit_animal", "alcool"]
 
 COLONNES_ALIMENTS = [
-    "ciqual_code", "nom_fr", "nom_en", "groupe_fr", "kcal_100g",
-    "proteines_100g", "glucides_100g", "lipides_100g", "fibres_100g",
+    "ciqual_code", "nom_fr", "nom_en", "groupe_code", "groupe_fr", "kcal_100g",
+    "proteines_100g", "glucides_100g", "lipides_100g", "fibres_100g", "alcool_100g",
     "viande", "porc", "poisson_fruits_de_mer", "produit_animal", "alcool",
     "allergenes",
 ]
@@ -381,12 +381,14 @@ def construire(args):
             "ciqual_code": code,
             "nom_fr": al["nom"],
             "nom_en": nom_en,
+            "groupe_code": al["grp_code"],
             "groupe_fr": al["grp_nom"],
             "kcal_100g": champs["kcal"][0],
             "proteines_100g": champs["proteines"][0],
             "glucides_100g": champs["glucides"][0],
             "lipides_100g": champs["lipides"][0],
             "fibres_100g": champs["fibres"][0],
+            "alcool_100g": champs["alcool"][0],
             "viande": et["viande"],
             "porc": et["porc"],
             "poisson_fruits_de_mer": et["poisson_fruits_de_mer"],
