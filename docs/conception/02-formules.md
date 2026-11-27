@@ -47,8 +47,10 @@ Base        = Dépense totale (section 2)
 Perte       : Base − 500
 Maintien    : Base
 Prise       : Base + 300
-Objectif    = arrondi à la dizaine supérieure de max(Base ajustée, REE, 1 200)
+Objectif    = min(6 000, arrondi à la dizaine supérieure de max(Base ajustée, REE, 1 200))
 ```
+
+Le plafond de 6 000 kcal reprend la borne de l'objectif saisi (RG35). Ainsi, au retrait du consentement, la dernière valeur calculée reste toujours un objectif saisi valide (RG11).
 
 L'arrondi se fait **vers le haut**, pour que l'objectif ne tombe jamais sous la REE. Par exemple, une REE de 1 214 donne 1 220, et non 1 210.
 
@@ -80,9 +82,9 @@ L'arrondi se fait **vers le haut**, pour que l'objectif ne tombe jamais sous la 
 
 - **Source :** Anses, avis 2012-SA-0103, *Actualisation des repères du PNNS*, décembre 2016, tableau 4. Les pourcentages s'entendent hors alcool.
 - **Les valeurs par défaut sont une décision de conception :** on prend une valeur au milieu de chaque intervalle, ajustée pour que la somme fasse 100 %.
-- **Personnalisation :** l'utilisateur peut changer la répartition, à condition que la somme fasse 100 %. Hors des intervalles de l'ANSES, l'app affiche un avertissement mais ne refuse pas.
+- **Personnalisation :** l'utilisateur peut fixer ses grammes librement (p. 14). L'app affiche un avertissement, sans refuser, si l'énergie de ses macros (4 P + 4 G + 9 L) s'écarte de plus de 10 % de l'objectif calorique, ou si leur répartition sort des intervalles de l'ANSES.
 
-**Conversion en grammes (coefficients d'Atwater) :**
+**Objectifs en grammes proposés par défaut (RG36), avec les coefficients d'Atwater :**
 
 ```
 Protéines (g) = Objectif × %P / 4
@@ -163,6 +165,8 @@ kcal estimées = (MET − 1) × poids (kg) × durée (h)
 | Sports | Tennis | Tennis | 15675 | 6,8 |
 | Sports | Danse | Dancing | 03025 | 4,5 |
 | Sports | Boxe (sac) | Boxing (punching bag) | 15110 | 5,8 |
+
+**Difficulté (RG29) :** elle est tirée de la classe d'intensité du Compendium (Herrmann 2024, §2.5) : facile sous 3 MET, modérée de 3 à 5,9, difficile à partir de 6.
 
 Cela fait 24 types. Les catégories reprennent celles du cahier (p. 8 : cardio, musculation, yoga, marche), plus « sports ». Les vitesses en km/h sont converties depuis les intitulés du Compendium, qui sont en mph.
 

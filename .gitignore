@@ -22,3 +22,6 @@ DerivedData/
 
 # Back-office
 node_modules/
+
+# Python
+__pycache__/

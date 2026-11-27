@@ -203,7 +203,7 @@ Format : « En tant que…, je veux…, afin de… », suivi des critères d'acc
 **US18 — Objectif calorique (UC20, I).** En tant qu'utilisateur, je veux un objectif calorique calculé ou saisi, et des objectifs de macros, afin de savoir quoi viser.
 - En mode calculé, l'objectif suit la formule de `02-formules.md` et se met à jour quand le profil change.
 - En mode saisi, une valeur sous la dépense de repos estimée affiche un avertissement, et une valeur hors de 1 200 à 6 000 kcal est refusée (RG35).
-- Les macros sont proposées en pourcentages, modifiables, dont la somme fait 100 %. Elles s'affichent aussi en grammes.
+- Les objectifs de macros sont en grammes, comme dans le cahier (p. 14). L'app les propose à partir de la répartition de l'ANSES, et l'utilisateur peut les modifier.
 
 **US19 — Objectifs d'activité (UC21, I).** En tant qu'utilisateur, je veux me fixer des objectifs de séances, de minutes ou de calories brûlées, par jour ou par semaine, pour toutes les activités ou pour une catégorie, afin de rester régulier.
 - Par exemple « 3 séances par semaine » ou « 30 minutes de cardio par jour ».
@@ -300,9 +300,11 @@ Chaque règle est vérifiée par l'API, ou par l'app quand elle est locale (RG08
   | Régimes, préférence de viande, allergènes | Effacée | Article 9 |
   | Pesées saisies ou importées | Effacées | Donnée de santé |
   | Séances et énergie active importées de Santé | Effacées, et l'import s'arrête | Viennent de Santé, sous consentement |
-  | Séances saisies dans ZakFit, avec leurs kcal | Gardées | Suivi sportif saisi par l'utilisateur, hors consentement santé |
+  | Séances saisies dans ZakFit, avec leurs kcal saisies | Gardées | Suivi sportif saisi par l'utilisateur, hors consentement santé |
+  | Kcal **estimées** des séances | Effacées (« non renseignées ») | Elles dérivent du poids : avec le MET et la durée, on pourrait recalculer le poids de chaque séance |
   | Repas, favoris, aliments personnalisés | Gardés | Suivi alimentaire, sans donnée de l'article 9 |
-  | Objectif calorique | Passe en mode saisi, avec la dernière valeur | L'utilisateur garde un objectif |
+  | Objectif calorique | Passe en mode saisi, avec la dernière valeur calculée, ramenée entre 1 200 et 6 000 kcal | L'utilisateur garde un objectif valide (RG35) |
+  | Versions calculées de l'historique des objectifs (RG52) | Effacées | Elles dérivent du poids, de la taille, de l'âge et du sexe |
   | Objectifs d'activité | Gardés | Pas de donnée de santé |
   | Historique des consentements (date, version, retrait) | Gardé | Preuve du consentement (article 7 du RGPD) |
 
@@ -316,7 +318,8 @@ Chaque règle est vérifiée par l'API, ou par l'app quand elle est locale (RG08
 - **RG15** — L'orientation vaut **perte**, **maintien** ou **prise de masse** (p. 6). Elle ajuste l'objectif calculé dans des limites (RG34).
 - **RG16** — Régimes, repris de Bon App' :
   - préférence de viande : standard, halal, casher ou sans porc ;
-  - indicateurs végétarien, végan et sans gluten ;
+  - indicateurs végétarien et végan ;
+  - « sans gluten » et « sans lactose » passent par la déclaration des allergènes gluten et lait (RG17), pour ne pas enregistrer deux fois la même information ;
   - végan implique végétarien ;
   - un végétarien n'a pas de préférence de viande, puisqu'elle ne sert plus.
 - **RG17** — Les allergènes déclarés appartiennent à la liste des 14 allergènes réglementaires (règlement UE 1169/2011, annexe II). La préférence « sans lactose » du cahier (p. 6) passe par l'allergène « lait (y compris le lactose) ».
@@ -332,14 +335,15 @@ Chaque règle est vérifiée par l'API, ou par l'app quand elle est locale (RG08
   Cela répond aux pages 13 et 22, qui demandent des valeurs « cohérentes » et des calories « réalistes ».
 - **RG19** — Un aliment est soit de **base**, soit **personnalisé**.
   - Les aliments de base sont au départ environ 300 aliments tirés de CIQUAL. L'administrateur peut ensuite en ajouter.
-  - Chaque aliment de base appartient à une catégorie : le groupe CIQUAL, par exemple « fruits, légumes, légumineuses » (p. 22).
+  - Chaque aliment de base appartient obligatoirement à une catégorie : le groupe CIQUAL, par exemple « fruits, légumes, légumineuses » (p. 22). Pour un aliment personnalisé, la catégorie est facultative ; sans elle, il compte comme « non classé » dans les statistiques.
   - Un aliment personnalisé n'est visible et utilisable que par son créateur.
 - **RG20** — Unités :
   - un aliment peut avoir plusieurs unités, chacune avec un libellé et un poids en grammes, par exemple « 1 œuf moyen = 50 g » ;
   - une quantité se saisit en grammes ou en unités, et elle est enregistrée en grammes ;
   - l'unité choisie est gardée pour l'affichage.
 - **RG21** — Étiquettes et compatibilité :
-  - chaque aliment porte ses étiquettes : contient de la viande, du porc, du poisson, un produit animal, du gluten, et ses allergènes ;
+  - chaque aliment porte ses étiquettes (viande, porc, produit animal, alcool) et ses allergènes. Le poisson, les fruits de mer et le gluten se lisent dans les allergènes ;
+  - les étiquettes sont cohérentes : le porc implique la viande, la viande implique un produit animal, et 0,5 g d'alcool pour 100 g ou plus implique l'étiquette alcool ;
   - un aliment est incompatible avec un régime quand ses étiquettes le contredisent ;
   - chaque aliment de base a des étiquettes vérifiées une à une (voir `donnees/README.md`) ;
   - un aliment personnalisé sans étiquettes est marqué « allergènes non renseignés ». L'absence d'étiquette ne vaut jamais « compatible » ;
@@ -359,7 +363,7 @@ Chaque règle est vérifiée par l'API, ou par l'app quand elle est locale (RG08
   - Quand on modifie un repas, une ligne ajoutée ou dont la quantité change est recalculée avec les valeurs actuelles.
   - Une ligne inchangée garde ses valeurs figées.
 - **RG26** — Le total d'un repas est la somme de ses lignes, et le total d'un jour la somme de ses repas. Les deux sont calculés par l'API.
-- **RG27** — Un favori a un nom et des lignes (aliment, quantité, unité). Partir d'un favori crée un nouveau repas, recalculé avec les valeurs actuelles.
+- **RG27** — Un favori a un nom, unique pour un même utilisateur, et des lignes (aliment, quantité, unité). Partir d'un favori crée un nouveau repas, recalculé avec les valeurs actuelles.
 - **RG28** — Bonus photo :
   - la proposition ne contient que des aliments de la base, avec leurs grammes ;
   - rien n'est enregistré sans validation ;
@@ -371,6 +375,10 @@ Chaque règle est vérifiée par l'API, ou par l'app quand elle est locale (RG08
 - **RG29** — Le type d'une activité vient de la liste de référence.
   - Au départ, elle compte 24 types tirés du Compendium 2024, avec leur code et leur MET (voir `02-formules.md`, section 7).
   - Chaque type appartient à une catégorie : cardio, musculation, yoga et souplesse, marche, sports.
+  - Il porte aussi (p. 22) :
+    - une difficulté (facile, modérée, difficile), tirée au chargement de sa classe d'intensité du Compendium (moins de 3 MET, de 3 à 5,9, 6 et plus) et modifiable par l'administrateur ;
+    - des instructions facultatives, en français et en anglais ;
+    - les groupes musculaires sollicités. La correspondance de départ est une proposition de ZakFit, modifiable dans le back-office.
   - L'administrateur peut créer un type, mais seulement avec un code et un MET du Compendium. Il ne peut pas modifier le MET d'un type, parce que les conditions d'usage du Compendium l'interdisent. Cette limite s'écarte de la p. 22 (voir section 5).
 - **RG30** — La durée est un nombre entier de 1 à 600 minutes. La date ne doit pas être dans le futur.
 - **RG31** — Les calories sont facultatives, de 0 à 5 000 (p. 8). Elles ont l'un de ces trois états :
@@ -383,25 +391,28 @@ Chaque règle est vérifiée par l'API, ou par l'app quand elle est locale (RG08
 - **RG33** — Une activité a une origine : **saisie** ou **Santé**.
   - Une activité importée garde l'identifiant de Santé, unique par utilisateur, ce qui évite les doublons.
   - ZakFit écrit dans Santé ses séances saisies, avec leurs kcal, et ses pesées. Il ne réimporte jamais ce qu'il a écrit lui-même (contrôle de la source, qui vaut aussi pour l'énergie).
-  - Supprimer une activité importée la marque comme ignorée, pour qu'elle ne revienne pas.
+  - Supprimer une activité importée la marque comme ignorée, pour qu'elle ne revienne pas. Ses kcal sont effacées ; seuls restent ses champs obligatoires (minimisation).
+  - Correspondance des types : l'API tient une table fixe qui associe chaque type de séance de Santé à un code du Compendium du référentiel (par exemple, course vers 12050). Une séance sans équivalent n'est pas importée, et l'app indique combien de séances ont été écartées.
 
 ### Objectifs, pesées, tableau de bord
 
 - **RG34** — En mode **calculé**, l'objectif calorique part de la dépense de repos (Mifflin-St Jeor), que la p. 15 appelle « métabolisme basal ». On la multiplie par le niveau d'activité (PAL), puis on l'ajuste selon l'orientation, dans des limites.
-  - Le résultat ne descend jamais sous la dépense de repos ni sous le plancher de 1 200 kcal. Il est arrondi à la dizaine **supérieure**.
+  - Le résultat ne descend jamais sous la dépense de repos ni sous le plancher de 1 200 kcal, et ne dépasse jamais 6 000 kcal (borne de RG35). Il est arrondi à la dizaine **supérieure**.
   - Il est recalculé à chaque changement du profil ou du poids.
   - Les valeurs sont dans `02-formules.md`.
 - **RG35** — En mode **saisi** :
   - une valeur sous 1 200 kcal ou au-dessus de 6 000 kcal est refusée. Ces bornes sont des décisions de conception (voir `02-formules.md`) ;
   - une valeur sous la dépense de repos estimée affiche un avertissement, seulement si cette dépense est calculable, c'est-à-dire avec le consentement santé.
-- **RG36** — Les objectifs de macros sont des pourcentages de l'objectif calorique, dont la somme fait 100. La conversion en grammes utilise les coefficients d'Atwater. La répartition par défaut est sourcée dans `02-formules.md`.
+- **RG36** — Les objectifs de macros sont exprimés **en grammes** (p. 14).
+  - Par défaut, l'API les calcule à partir de l'objectif calorique et de la répartition de l'ANSES (`02-formules.md` §4), et les recalcule quand l'objectif change.
+  - Dès que l'utilisateur les modifie, ils ne bougent plus. Si leur énergie (4 P + 4 G + 9 L) s'écarte de plus de 10 % de l'objectif calorique, l'app affiche un avertissement sans refuser.
 - **RG37** — Un objectif d'activité se définit par :
   - une métrique : séances, minutes ou calories brûlées ;
   - une période : jour ou semaine, ou **séance** pour les calories, par exemple « 300 calories par séance » (p. 16) ;
   - une catégorie facultative (vide pour toutes) ;
   - une valeur strictement positive.
 
-  Le trio métrique, période, catégorie est unique pour un utilisateur.
+  Un objectif a une **période de validité** (premier et dernier jour). Le modifier clôt la ligne en cours et en crée une nouvelle. Le trio métrique, période, catégorie n'a qu'un objectif en cours par utilisateur. Un bilan passé se compare donc à l'objectif qui s'appliquait ce jour-là.
 - **RG38** — La semaine va du lundi au dimanche (ISO 8601), et le mois est le mois civil, tous deux dans le fuseau de l'utilisateur.
 - **RG39** — Une pesée a une date, un poids (RG13) et une origine (saisie ou Santé).
   - On compte au plus une pesée par jour et par utilisateur.
@@ -430,18 +441,20 @@ Chaque règle est vérifiée par l'API, ou par l'app quand elle est locale (RG08
 - **RG43** — Supprimer un compte efface toutes ses données : repas et leurs lignes, favoris, aliments personnalisés, activités, pesées, objectifs, consentements. Un seul service sert à l'utilisateur (UC07) et à l'administrateur (UC33).
 - **RG44** — Le back-office et ses routes sont réservés au rôle administrateur.
 - **RG45** — La liste des utilisateurs affiche le nom, l'email, le statut, la date d'inscription, le nombre d'activités et les objectifs définis (p. 21).
-  - Les objectifs affichés sont l'objectif calorique et les objectifs d'activité, sans l'orientation.
+  - Les objectifs affichés sont le mode de l'objectif calorique (calculé ou saisi) et les objectifs d'activité. La valeur calculée n'est pas montrée : elle dérive du poids, de la taille, de l'âge et du sexe.
   - La liste est paginée, filtrable et triable.
   - **Aucune donnée de santé individuelle n'est visible par l'administrateur** : ni poids, ni allergènes, ni régimes, ni orientation. Le filtre de la p. 21 « ayant un objectif de perte de poids » est donc écarté.
-- **RG46** — Un aliment de base ou un type d'activité déjà utilisé n'est pas supprimé mais archivé. La création et la modification appliquent RG18 ou RG29.
+- **RG46** — Un aliment de base ou un type d'activité déjà utilisé n'est pas supprimé mais archivé. Un élément jamais utilisé peut être supprimé. La création et la modification appliquent RG18 ou RG29.
 - **RG47** — Les statistiques globales sont des agrégats. Une répartition (par âge, sexe ou orientation) qui porte sur moins de 5 personnes est masquée, pour empêcher de reconnaître quelqu'un.
-- **RG48** — Les actions d'administration (bloquer, suspendre, réactiver, supprimer, modifier un référentiel) sont journalisées : date, administrateur, identifiant de la cible, action. Le journal ne garde ni l'email ni le nom de la cible, pour que la suppression du compte (RG43) ne laisse pas de donnée personnelle.
+- **RG48** — Les actions d'administration (bloquer, suspendre, réactiver, supprimer, modifier un référentiel) sont journalisées : date, administrateur, identifiant de la cible, action. Le journal ne garde ni l'email ni le nom de la cible, pour que la suppression du compte (RG43) ne laisse pas de donnée personnelle. Le compte d'un administrateur qui a des actions journalisées ne se supprime pas : on le suspend.
 
 ### Langue, mentions et avertissements
 
 - **RG49** — L'app suit la langue de l'appareil, français ou anglais. Les aliments ont un nom dans chaque langue : CIQUAL 2025 fournit le nom anglais dans son fichier XML.
 - **RG50** — La mention « ZakFit ne remplace pas un avis médical » apparaît dans le questionnaire de démarrage et dans les réglages. Les valeurs calculées sont présentées comme des estimations.
 - **RG51** — La recherche d'aliments et les badges de régime ou d'allergène portent un avertissement permanent : « Informations indicatives pour un aliment générique. Vérifie toujours la liste des ingrédients du produit. »
+- **RG52** — **L'objectif calorique et les macros sont historisés.** À chaque changement de la cible effective (modification, changement de mode, nouvelle pesée ou nouveau profil en mode calculé), l'API enregistre une version datée et figée. Le bilan d'un jour passé (historique, rapports, statistiques d'administration) utilise la version qui s'appliquait ce jour-là (p. 16, 19, 20, 23).
+- **RG53** — Chaque connexion réussie est journalisée avec sa date seulement, sans adresse IP ni appareil. Le tableau de bord d'administration en tire la fréquence des connexions (p. 21). Le journal est effacé avec le compte (RG43).
 
 ## 5. Exigences non fonctionnelles et écarts assumés
 
@@ -474,3 +487,5 @@ Chaque règle est vérifiée par l'API, ou par l'app quand elle est locale (RG08
 | Filtre « utilisateurs ayant un objectif de perte de poids » | 21 | Écarté | Donnée de santé, invisible pour l'administrateur (RG45) |
 | Section 6.4, fonctionnalités avancées d'administration | 23-24 | Hors périmètre | Choix de périmètre (D18) |
 | Déploiement en HTTPS | 26 | Local seulement | Choix E7. L'app joint l'API par le réseau local |
+| Micronutriments (vitamines, minéraux) | 12 | Hors périmètre | Mentionnés dans la présentation du suivi, sans liste ni fonctionnalité dans le cahier. ZakFit suit l'énergie et les trois macros, plus les fibres et l'alcool pour le contrôle RG18 |
+| Progression automatique d'un objectif (« 10 minutes de plus chaque semaine ») | 16 | Hors périmètre | Possibilité citée en exemple. L'utilisateur peut modifier son objectif, et l'historique garde chaque version (RG37) |
