@@ -187,3 +187,67 @@ python3 -I outils/construire_aliments.py \
 - Ajouter `--verifier` pour comparer sans rien écrire : le script échoue si les fichiers livrés diffèrent de la régénération.
 - `--ciqual` accepte aussi un export CSV du même XLSX. Les deux donnent des fichiers identiques (vérifié le 23/11/2026).
 - Pour modifier la base, éditer `outils/selection.csv`, `outils/etiquettes.csv` ou `outils/portions_choix.csv`, jamais les CSV générés.
+
+## Données de démonstration
+
+`../sql/03-donnees-demo.sql` contient des comptes **fictifs**. Il est produit par `outils/generer_demo.py` (bibliothèque standard Python, graine aléatoire fixe) et se charge après `01-schema.sql` et `02-referentiels.sql`. Les aliments et les types d'activité sont référencés par les mêmes UUID stables que les référentiels (`uid` de `modele/generer.py`, à partir du code CIQUAL ou du code du Compendium).
+
+### Contenu
+
+- **Zak LeBoss** (`zak.leboss@example.com`), le compte de démonstration : 6 semaines d'historique qui se terminent à la date de référence.
+  - Profil : homme, né en 1994, 180 cm, modérément actif, orientation perte. Allergène arachides, sans porc. Consentement santé actif.
+  - Repas : 3 ou 4 par jour, composés d'aliments compatibles avec son profil, souvent saisis en unités. Une vingtaine viennent de ses 2 favoris. Il a 1 aliment personnalisé (pancakes protéinés).
+  - Séances : 3 à 5 par bloc de 7 jours qui finit à la date de référence, et par semaine civile complète. Certaines sont importées de Santé, avec `health_uuid`, et seulement avec un type que la table fixe Santé vers Compendium peut produire (`05-contrat-api.md` §6, RG33). Une séance importée est ignorée. À partir de la 2e semaine, ses séances saisies sont aussi écrites dans Santé : elles gardent `source = manual` et reçoivent un `health_uuid`. Chaque séance a son jour local, `performed_on`, calculé depuis `performed_at` dans le fuseau de l'utilisateur (RG38).
+  - Pesées : environ 2 par semaine, de 86,4 à 83,6 kg, dont certaines importées de Santé ; à partir de la 2e semaine, ses pesées saisies sont écrites dans Santé. Une pesée importée (celle d'un proche sur sa balance) est ignorée : son poids est effacé, seuls restent son jour et son identifiant Santé (RG39). Énergie active de Santé sur une partie des jours.
+  - Objectif calorique calculé : une version par pesée qui change la cible (RG52), plus des macros personnalisées au 15e jour. Objectifs d'activité, dont « séances par semaine », passé de 3 à 4 (ligne close puis nouvelle ligne, RG37). Réglages des 4 rappels personnalisés, connexions.
+- **18 autres utilisateurs** (`prenom.nom@example.com`), pour des statistiques d'administration qui aient du sens.
+  - 15 ont un consentement actif. Avec Zak, cela fait 16 profils : 8 femmes et 8 hommes ; 6 en perte, 5 en maintien, 5 en prise de masse ; 5 de 18 à 29 ans, 6 de 30 à 44 ans, 5 de 45 ans et plus. Chaque groupe compte donc au moins 5 personnes, et aucun n'est vide (RG47).
+  - **Tranches d'âge retenues :** 18-29, 30-44 et 45 ans ou plus. L'âge vaut l'année en cours moins l'année de naissance. C'est la décision du projet, et le contrat d'API doit utiliser les mêmes tranches. Le générateur et `--verifier` contrôlent qu'aucune tranche ne compte moins de 5 personnes.
+  - Régimes variés : végétarienne, végane, halal, casher, sans porc. Allergènes : lait, gluten, crustacés, fruits à coque. Aucun repas ne contient un aliment incompatible avec le profil de son utilisateur.
+  - 2 utilisateurs n'ont jamais donné leur consentement. Ils ont un objectif saisi, et aucune donnée de santé.
+  - 1 utilisateur a retiré son consentement. On voit l'état qui suit RG11 : profil de santé et allergènes effacés, consentement gardé avec sa date de retrait, aucune pesée, kcal estimées passées à « non renseignées », objectif saisi égal à la dernière valeur calculée, versions calculées effacées.
+  - 1 compte est bloqué avec une date de fin, 1 est suspendu, et 1 a été bloqué puis réactivé.
+- Chaque utilisateur a ses 4 réglages de rappel, créés par défaut à l'inscription (actifs, 18 h). Quelques-uns en ont personnalisé.
+- Pas de repas d'origine photo : c'est un bonus (RG28), qui ne sera peut-être pas réalisé.
+- **1 administrateur** (`admin@example.com`), sans données de santé, avec 7 actions journalisées : modifications de référentiels, blocages, suspension, réactivation, suppression d'un compte (seul son identifiant reste, RG48).
+
+### Valeurs calculées
+
+- Ligne de repas : valeur pour 100 g × grammes / 100, figée à 2 décimales et arrondie à 0,5 vers le haut (RG24, RG25). Le calcul part des valeurs telles que la base les stocke : `food` garde 3 décimales pour les kcal et 4 pour les macros, ce qui suffit pour CIQUAL. `food_portion.grams` en garde 2 : la poignée d'amandes de 28,35 g reste à 28,35 g.
+- Kcal estimées d'une séance : (MET − 1) × poids de la dernière pesée non ignorée à cette date × heures (`02-formules.md` §6).
+- Objectif calculé : Mifflin-St Jeor, PAL, ajustement de l'orientation, plancher (REE et 1 200 kcal), dizaine supérieure, plafond de 6 000 kcal (§1 à §3). Les macros par défaut sont à 15, 48 et 37 % (§4). Les tailles sont des multiples de 4 cm et les poids ont une décimale : la REE est donc un entier, et l'arrondi de la REE ne peut pas changer l'objectif. Le générateur le vérifie.
+
+### Générer
+
+Depuis `docs/conception` :
+
+```sh
+set -a; . ../../backend/.env; set +a     # DEMO_PASSWORD vient de backend/.env, ignoré par git
+# ou, sans fichier : read -s DEMO_PASSWORD; export DEMO_PASSWORD
+python3 -I donnees/outils/generer_demo.py                              # date de référence par défaut : 2026-12-10
+python3 -I donnees/outils/generer_demo.py --date-reference 2026-12-11  # pour décaler tout l'historique
+```
+
+- **Date de référence :** c'est le dernier jour de l'historique, qu'on considère comme « aujourd'hui » à 21 h 30. Par défaut, le 10/12/2026, veille du rendu. Pour une démonstration un autre jour, on régénère avec cette date, sinon les données paraissent anciennes ou futures. **Pour le développement, on régénère avec la date du jour.** Chargées avant le 10/12, les données par défaut contiennent des repas, des séances et des actions d'administration futures, que l'API refuse (RG23, RG30). Le SQL le rappelle dans son en-tête.
+- **Mot de passe :** `DEMO_PASSWORD` est obligatoire et doit respecter RG02. Le script calcule une empreinte bcrypt par compte avec `htpasswd -niBC 12` de XAMPP (option `--htpasswd` pour un autre chemin). Le mot de passe passe par l'entrée standard, donc `ps` ne le montre pas. Le script remplace ensuite le préfixe `$2y$` par `$2b$`, que Vapor attend (même algorithme). Seules les empreintes entrent dans le SQL. Le script n'écrit le mot de passe ni dans un fichier, ni dans un commentaire, ni dans la sortie. Il n'existe que dans `backend/.env`, que git ignore, ou dans la session du shell.
+- **Reproductible :** à date égale, deux générations ne diffèrent que par les empreintes, qui changent à chaque fois avec leur sel aléatoire.
+
+### Contrôler une base chargée
+
+```sh
+python3 -I donnees/outils/generer_demo.py --verifier "mariadb -u <compte> <base d'essai>"
+```
+
+Le script ne modifie rien. Il compare la base au jeu attendu :
+- nombre de lignes par table ;
+- valeurs figées des lignes de repas, grammes des lignes saisies en unités ;
+- totaux d'une journée de Zak ;
+- repas et séances par semaine ;
+- jour local des séances (`performed_on`) recalculé avec zoneinfo, pesées ignorées (une chez Zak, au plus une par utilisateur) ;
+- kcal estimées ;
+- versions calculées de l'objectif ;
+- répartitions par sexe, orientation et tranches d'âge (18-29, 30-44, 45 ans ou plus), avec au moins 5 personnes par groupe ;
+- absence de donnée de santé sans consentement, et aucun profil de santé sans consentement actif ;
+- séances importées limitées aux codes de la table Santé (`05-contrat-api.md` §6) ;
+- 4 réglages de rappel par utilisateur, écriture dans Santé des saisies de Zak ;
+- cohérence des dates et des allergènes.
